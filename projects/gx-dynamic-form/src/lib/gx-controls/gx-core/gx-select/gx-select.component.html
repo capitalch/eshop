@@ -1,0 +1,9 @@
+<div [formGroup]='parent' [class] = "layout.id + '-box'">
+  <label [class] = "layout.id + '-label'">{{layout.label}}</label>
+  <select [class]='layout.id' [ngClass] = 'layout.class'
+      [ngStyle]='layout.style' [formControlName]='layout.name'>
+      <option *ngFor="let option of options" [value]="option.value" >{{option.name}}
+      </option>
+  </select>
+  <app-gx-error [layout]='layout' [parent]='parent'></app-gx-error>
+</div>

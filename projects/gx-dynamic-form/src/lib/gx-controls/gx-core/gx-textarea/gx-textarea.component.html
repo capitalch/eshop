@@ -1,0 +1,8 @@
+<div [formGroup]='parent' [class] = "layout.id + '-box'">
+  <label [for]='layout.id' [class] = "layout.id + '-label'">{{layout.label}}</label>
+    <textarea [id]='layout.id' [class]='layout.id' [ngClass] = 'layout.class' [ngStyle]='layout.style'
+        [placeholder]='layout.placeholder'
+        [formControlName]='layout.name'>{{layout.value}}
+    </textarea>
+    <app-gx-error [layout]='layout' [parent]='parent'></app-gx-error>
+  </div>

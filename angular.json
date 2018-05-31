@@ -1,0 +1,386 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "eshop": {
+      "root": "",
+      "sourceRoot": "src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/eshop",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.app.json",
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ],
+            "styles": [
+              "node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "node_modules/font-awesome/scss/font-awesome.scss",
+              "node_modules/primeng/resources/primeng.min.css",
+              "node_modules/primeng/resources/themes/omega/theme.css",
+              "node_modules/bootstrap/dist/css/bootstrap.css",
+              "src/styles/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "eshop:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "eshop:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "eshop:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.spec.json",
+            "karmaConfig": "src/karma.conf.js",
+            "styles": [
+              "src/styles.css"
+            ],
+            "scripts": [],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "src/tsconfig.app.json",
+              "src/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "eshop-e2e": {
+      "root": "e2e/",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "e2e/protractor.conf.js",
+            "devServerTarget": "eshop:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "eshop:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "gx-dynamic-form": {
+      "root": "projects/gx-dynamic-form",
+      "sourceRoot": "projects/gx-dynamic-form/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/gx-dynamic-form/tsconfig.lib.json",
+            "project": "projects/gx-dynamic-form/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/gx-dynamic-form/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/gx-dynamic-form/src/test.ts",
+            "tsConfig": "projects/gx-dynamic-form/tsconfig.spec.json",
+            "karmaConfig": "projects/gx-dynamic-form/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/gx-dynamic-form/tsconfig.lib.json",
+              "projects/gx-dynamic-form/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "eshop-test1": {
+      "root": "projects/eshop-test1/",
+      "sourceRoot": "projects/eshop-test1/src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
+      },
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/eshop-test1",
+            "index": "projects/eshop-test1/src/index.html",
+            "main": "projects/eshop-test1/src/main.ts",
+            "polyfills": "projects/eshop-test1/src/polyfills.ts",
+            "tsConfig": "projects/eshop-test1/tsconfig.app.json",
+            "assets": [
+              "projects/eshop-test1/src/favicon.ico",
+              "projects/eshop-test1/src/assets"
+            ],
+            "styles": [
+              "node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "node_modules/font-awesome/scss/font-awesome.scss",
+              "projects/eshop-test1/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/eshop-test1/src/environments/environment.ts",
+                  "with": "projects/eshop-test1/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "eshop-test1:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "eshop-test1:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "eshop-test1:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/eshop-test1/src/test.ts",
+            "polyfills": "projects/eshop-test1/src/polyfills.ts",
+            "tsConfig": "projects/eshop-test1/tsconfig.spec.json",
+            "karmaConfig": "projects/eshop-test1/karma.conf.js",
+            "styles": [
+              "projects/eshop-test1/src/styles.css"
+            ],
+            "scripts": [],
+            "assets": [
+              "projects/eshop-test1/src/favicon.ico",
+              "projects/eshop-test1/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/eshop-test1/tsconfig.app.json",
+              "projects/eshop-test1/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "eshop-test1-e2e": {
+      "root": "projects/eshop-test1-e2e/",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/eshop-test1-e2e/protractor.conf.js",
+            "devServerTarget": "eshop-test1:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "eshop-test1:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "projects/eshop-test1-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ibuki": {
+      "root": "projects/ibuki",
+      "sourceRoot": "projects/ibuki/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ibuki/tsconfig.lib.json",
+            "project": "projects/ibuki/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/ibuki/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ibuki/src/test.ts",
+            "tsConfig": "projects/ibuki/tsconfig.spec.json",
+            "karmaConfig": "projects/ibuki/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ibuki/tsconfig.lib.json",
+              "projects/ibuki/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "angular-material": {
+      "root": "projects/angular-material",
+      "sourceRoot": "projects/angular-material/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/angular-material/tsconfig.lib.json",
+            "project": "projects/angular-material/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/angular-material/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/angular-material/src/test.ts",
+            "tsConfig": "projects/angular-material/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-material/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/angular-material/tsconfig.lib.json",
+              "projects/angular-material/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "eshop"
+}

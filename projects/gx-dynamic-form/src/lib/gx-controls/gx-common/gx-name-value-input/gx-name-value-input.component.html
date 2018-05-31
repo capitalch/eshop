@@ -1,0 +1,23 @@
+<div [class]="layout.id + '-box'">  
+  <mat-form-field *ngIf="!layout.options">
+    <input matInput
+    [placeholder]='"name"' [(ngModel)]='name' required>
+  </mat-form-field>
+  
+  <mat-form-field *ngIf="layout.options">
+    <input matInput [placeholder]="'name'" [formControl]="myControl" 
+      [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete" autoActiveFirstOption>
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+        {{ option }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput
+    [placeholder]='"value"' [(ngModel)]='value' required>
+  </mat-form-field>
+  
+  <button (click) = "addToParent()"><i class="fa fa-plus-square"></i></button>
+</div>

@@ -1,0 +1,7 @@
+<mat-form-field [formGroup]='parent' [class] = "layout.id + '-box'">
+  <textarea matInput [class]='layout.id' [ngClass] = 'layout.class'
+          [placeholder]='layout.placeholder' [ngStyle]='layout.style'
+          [formControlName]='layout.name'>{{layout.value}}
+  </textarea>
+</mat-form-field>
+<app-gx-error [layout]="layout" [parent]="parent"></app-gx-error>

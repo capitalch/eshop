@@ -1,0 +1,9 @@
+<mat-form-field [formGroup]='parent' [class] = "layout.id + '-box'">
+  <input (dateInput) = "change($event)" matInput
+      [class]='layout.id' [ngClass] = 'layout.class' [ngStyle]='layout.style' [matDatepicker]="picker"
+      [placeholder]="layout.placeholder" [formControlName] = "layout.name"
+      [value]="layout.value" readonly>
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+<app-gx-error [layout]="layout" [parent]="parent"></app-gx-error>
