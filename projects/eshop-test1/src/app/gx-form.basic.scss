@@ -1,0 +1,78 @@
+::ng-deep .basic-style-1 {
+    margin: 0px auto;
+    max-width: 600px;
+    font: 13px "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    border: 2px solid green;
+    small {
+        color: red;
+    }
+    legend {
+        font-weight: bold;
+        margin: 5px;
+    }
+    div {
+        margin: 5px 8px 0 8px;
+    }
+    i {
+        margin-left: 5px;
+    }
+    label {
+        margin-right: 5px;
+    }
+    fieldset {
+        border: 1px groove threedface; // padding: 5px;
+        margin: 5px;
+    }
+    input[type=text]:not([matInput]),
+    input[type=date]:not([matInput]),
+    input[type=datetime]:not([matInput]),
+    input[type=number]:not([matInput]),
+    input[type=search]:not([matInput]),
+    input[type=time]:not([matInput]),
+    input[type=url]:not([matInput]),
+    input[type=email]:not([matInput]),
+    textarea:not([matInput]),
+    select:not([matInput]) {
+        box-sizing: border-box;
+        border: 1px solid #BEBEBE;
+        padding: 5px;
+        margin: 0px;
+        outline: none;
+    }
+    input:not([matInput])[type=text]:focus,
+    input:not([matInput])[type=date]:focus,
+    input:not([matInput])[type=datetime]:focus,
+    input:not([matInput])[type=number]:focus,
+    input:not([matInput])[type=search]:focus,
+    input:not([matInput])[type=time]:focus,
+    input:not([matInput])[type=url]:focus,
+    input:not([matInput])[type=email]:focus,
+    textarea:not([matInput]):focus,
+    select:not([matInput]):focus {
+        box-shadow: 0 0 10px #88D5E9;
+        border: 1px solid #88D5E9;
+    }
+    .field-long {
+        width: 100%;
+    }
+    .label-name {
+        width: 40%;
+    }
+}
+
+::ng-deep .custom1 {
+    .id1, .id2 {
+        width: 44%;
+        display: inline-block;
+        label {
+            width: 100%;
+        }
+        input {
+            width: 80%;
+        }
+    }
+    button {
+        display: inline-block;
+        margin-left:5px;
+    }
+}

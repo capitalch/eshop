@@ -5,7 +5,7 @@ import { GxCustomService } from './service/gx-custom.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss', './gx-form.basic.scss']
 })
 export class AppComponent implements OnInit {
   title = 'app';
