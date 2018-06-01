@@ -43,11 +43,14 @@ const form1 = [
         , subtype: 'text'
         , id: 'id2'
         , name: 'myName1'
-        , label: 'First name1'
-        , placeholder: 'First name1'
+        , label: 'First name1 label'
+        , placeholder: 'First name1 placeholder'
         , value: ''
         , class: 'label-name'
-        // , style: { width: '40%' }
+        , style: {
+            'mat-label': { color: 'green' }
+            , input: { color: 'red' }
+        }
         , remove: true
         , validation: {
             required: { message: '$ is required' }
@@ -61,11 +64,14 @@ const form1 = [
         , label: 'First name2'
         , placeholder: 'First name2'
         , value: ''
-        // , style: { width: '40%' }
+        , style: {
+            label: { color: 'brown' }
+            , input: { color: 'red' }
+        }
         // , remove: true
-        // , validation: {
-        //     required: { message: '$ is required' }
-        // }
+        , validation: {
+            required: { message: '$ is required' }
+        }
     }
     // , {
     //     type: 'name-value-input'
@@ -446,10 +452,9 @@ const form1 = [
         type: 'mat-button'
         , subType: 'raised'
         , faClass: 'fa fa-taxi fa-fw'
-        , id: 'id100'
+        , id: 'submit1'
         , color: 'primary'
         , label: 'Add'
-        , actionId: 'submit2'
         , validateForm: true
     }
 

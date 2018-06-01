@@ -1,0 +1,10 @@
+<fieldset [formGroup]='parent' [class] = "layout.id + '-box'">
+  <legend [class] = "layout.id + '-label'">{{layout.label}}</legend>
+  <div *ngFor="let option of options ">
+      <input type = 'radio' [id]='option.id' [class]='layout.id' [ngClass] = 'layout.class'
+              [ngStyle]='layout.style' [formControlName]='layout.name'
+              [value] = 'option.value' >
+      <label [class] = "layout.id + '-option'" [for] = "option.id">{{option.name}}</label>
+  </div>
+  <app-gx-error [layout]='layout' [parent]='parent'></app-gx-error>
+</fieldset>

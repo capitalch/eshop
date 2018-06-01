@@ -1,0 +1,15 @@
+<fieldset  [formGroup]="parent" [class] = "layout.id + '-box'">
+  <legend [class] = "layout.id + '-label'">{{layout.label}}</legend>
+      <ng-container [formGroupName]="layout.name">
+          <ng-container *ngFor="let option of options">
+              <label [class] = "layout.id + '-option'"
+                      style="display:inline-block">
+                  <mat-checkbox [class]='layout.id' [ngClass] = 'layout.class'
+                      [ngStyle]='layout.style' [formControlName]="option.id">
+                  </mat-checkbox>
+                  {{option.name}}
+              </label>
+          </ng-container>
+      </ng-container>
+      <app-gx-error [layout]='layout' [parent]='parent'></app-gx-error>
+  </fieldset>

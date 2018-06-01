@@ -4,7 +4,7 @@ import { IbukiService } from 'ibuki';
 import { FormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'lib-gx-button',
+  selector: 'app-gx-button',
   templateUrl: './gx-button.component.html',
   styleUrls: ['./gx-button.component.scss']
 })
