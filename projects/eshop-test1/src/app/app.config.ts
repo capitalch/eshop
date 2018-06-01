@@ -22,7 +22,7 @@ const form1 = [
     }
     ,
     {
-        type: 'input'
+        type: 'mat-input'
         , subtype: 'text'
         , id: 'id1'
         , name: 'myName'
@@ -39,7 +39,7 @@ const form1 = [
 
     ,
     {
-        type: 'input'
+        type: 'mat-input'
         , subtype: 'text'
         , id: 'id2'
         , name: 'myName1'

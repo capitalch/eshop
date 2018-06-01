@@ -1,5 +1,4 @@
 import { Injectable, ChangeDetectorRef } from '@angular/core';
-// import { BrokerService } from '../broker.service';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs';
@@ -7,11 +6,8 @@ import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/first';
 import 'rxjs/add/operator/delay';
-// import 'rxjs/add/operator/of';
-// import {GxService} from 'gx-dynamic-form';
-// import {GxMapperService} from 'gx-dynamic-form';
-// import { GxService } from '../gx-dynamic-form/gx-service/gx.service';
-// import { GxMapperService } from '../gx-dynamic-form/gx-service/gx-mapper.service';
+import {GxService} from 'gx-dynamic-form';
+import {GxMapperService} from 'gx-dynamic-form';
 import { countries, genders1, food1, names1 } from './options-set';
 import { IbukiService } from 'ibuki';
 @Injectable({
@@ -23,8 +19,8 @@ export class GxCustomService {
   constructor(
     private ibukiService: IbukiService
     , private httpClient: HttpClient
-    // , private gxService: GxService
-    // , private gxMapperService: GxMapperService
+    , private gxService: GxService
+    , private gxMapperService: GxMapperService
   ) {
     this.registerCustomEvents();
     this.registerCustomValidators();
@@ -53,7 +49,7 @@ export class GxCustomService {
   };
 
   registerOptions() {
-    // this.gxService.registerOptions(this.options);
+    this.gxService.registerOptions(this.options);
   }
 
   registerCustomControls() {
@@ -130,12 +126,11 @@ export class GxCustomService {
               .switchMap(() => this.httpClient.post(arg.url, body))
               .first();
           }
-          // this.ref.tick();
           return (obs);
         };
         return (func);
       }
     };
-    // this.gxService.registerCustomValidators(customValidators);
+    this.gxService.registerCustomValidators(customValidators);
   }
 }
