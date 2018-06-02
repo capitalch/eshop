@@ -101,8 +101,6 @@ export class GxService {
   prepareCssClassAndStyle(it, main) {
     const a = it.layout.class && ((typeof it.layout.class === 'string')
       && (it.cssClass[main] = it.layout.class) || (it.cssClass = it.layout.class));
-    // const b = it.layout.style && ((typeof it.layout.style === 'string')
-    //   && (it.cssStyle.item = it.layout.style) || (it.cssStyle = it.layout.style));
     if (it.layout.style) {
       if (typeof it.layout.style === 'object') {
         const cssStyle = it.layout.style;
