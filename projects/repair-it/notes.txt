@@ -6,3 +6,4 @@
 6. After submit it shows an Alert box. The behavior should be: to show a message 
 there only for say 5 seconds and then disappear. Or the form should go in read only mode and there should be a message.
 7. Domain name as ServiceDunia.com or servicekarao.com
+8. Multiple mails
