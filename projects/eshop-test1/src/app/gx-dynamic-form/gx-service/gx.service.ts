@@ -98,9 +98,11 @@ export class GxService {
     return (ret);
   }
 
-  prepareCssClassAndStyle(it, main) {
-    const a = it.layout.class && ((typeof it.layout.class === 'string')
-      && (it.cssClass[main] = it.layout.class) || (it.cssClass = it.layout.class));
+  prepareCssClassAndStyle(it, main?) {
+    const a = it.layout.class && (typeof it.layout.class === 'string')
+      ? main && (it.cssClass[main] = it.layout.class)
+      : it.cssClass = it.layout.class;
+
     if (it.layout.style) {
       if (typeof it.layout.style === 'object') {
         const cssStyle = it.layout.style;
@@ -108,7 +110,7 @@ export class GxService {
         if (typeof value === 'object') {
           it.cssStyle = it.layout.style;
         } else {
-          it.cssStyle[main] = it.cssStyle;
+          const b = main && (it.cssStyle[main] = it.cssStyle);
         }
       }
     }

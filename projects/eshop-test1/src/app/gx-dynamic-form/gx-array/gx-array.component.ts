@@ -23,7 +23,7 @@ export class GxArrayComponent implements OnInit {
     const group = this.fb.group({}, { validator: groupValidators.validator, asyncValidator: groupValidators.asyncValidator });
     const arrayValidators = this.gxService.getGroupValidators(this.layout);
     this.parent.setControl(this.layout.name, this.fb.array([group], arrayValidators.validator, arrayValidators.asyncValidator));
-    this.gxService.prepareCssClassAndStyle(this, 'input');
+    this.gxService.prepareCssClassAndStyle(this);
   }
 
   removeFromArray(j) {

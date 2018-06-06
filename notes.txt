@@ -28,17 +28,9 @@ signaservice.com
 billeservice.com
 shantiservice.com
 
+//Progress
+06/06/2018: Working on button-group styling. Thinking of using button in place of gxDynamic.
 
-// To do
-1. Filter and search
-2. Search based on filter
-3. Organize
-
-4. User management
-4. New product entry
-5. Payment gateway
-6. 
-7.
 
 //dynamic reactive form
 https://toddmotto.com/angular-dynamic-components-forms
@@ -109,7 +101,7 @@ https://arjunphp.com/angular-2-async-validator-usernameemail-availability-check/
                                     31. proper button icons in name value pair
                                     32. Validation in name value pair
 
-31. Proper styles in default mode  
+31. Proper styles incorporation  
 33. Use JSON object to edit data
 34. Organize proper documentation
 35. Custom component
