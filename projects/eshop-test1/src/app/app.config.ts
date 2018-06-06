@@ -20,6 +20,7 @@ const form1 = [
         }
         , id: 'gx-form1'
     }
+
     ,
     {
         type: 'array'
@@ -77,6 +78,7 @@ const form1 = [
     , {
         type: 'buttongroup'
         , id: 'button-group'
+        , style: { div: { 'text-align': 'right' } }
         , controls: [
             {
                 type: 'button'
@@ -84,6 +86,7 @@ const form1 = [
                 , class: 'btn btn-primary'
                 , id: 'submit2'
                 , validateForm: true
+                , style: { div: { display: 'inline-block' } }
             }
             , {
                 type: 'button'
@@ -91,6 +94,7 @@ const form1 = [
                 , id: 'reset'
                 , label: 'Cancel'
                 , class: 'btn btn-primary'
+                , style: { div: { display: 'inline-block' } }
             }
         ]
     }
@@ -126,23 +130,6 @@ const form1 = [
     //         , input: { color: 'red' }
     //     }
     //     , remove: true
-    //     , validation: {
-    //         required: { message: '$ is required' }
-    //     }
-    // }
-    // ,
-    // {
-    //     type: 'input'
-    //     , subtype: 'text'
-    //     , name: 'myName2'
-    //     , label: 'First name2'
-    //     , placeholder: 'First name2'
-    //     , value: ''
-    //     , style: {
-    //         label: { color: 'brown' }
-    //         , input: { color: 'red' }
-    //     }
-    //     // , remove: true
     //     , validation: {
     //         required: { message: '$ is required' }
     //     }
@@ -493,13 +480,7 @@ const form1 = [
     //     , id: 'mySubmit'
     //     , validateForm: true
     // }
-    // , {
-    //     type: 'button'
-    //     , label: 'Cancel'
-    //     , class: 'btn btn-primary'
-    //     , actionId: 'submit1'
-    //     // , validateForm: true
-    // }
+    //
     // , {
     //     type: 'buttongroup'
     //     , class: ''
@@ -536,9 +517,31 @@ const form1 = [
 export { form1 };
 
     // documentation
+    // ,
+    // {
+    //     type: 'input'
+    //     , subtype: 'text'
+    //     , name: 'myName2'
+    //     , label: 'First name2'
+    //     , placeholder: 'First name2'
+    //     , value: ''
+    //     , style: {
+    //         label: { color: 'brown' }
+    //         , input: { color: 'red' }
+    //     }
+    //     // , remove: true
+    //     , validation: {
+    //         required: { message: '$ is required' }
+    //     }
+    // }
 
-
-
+    // , {
+    //     type: 'button'
+    //     , label: 'Submit'
+    //     , class: { button: 'btn btn-primary', div: 'button-right' }
+    //     , id: 'submit1'
+    //     , validateForm: true
+    // }
 
 
 

@@ -1,6 +1,6 @@
 <div [class] = "layout.id" [ngClass]='cssClass.div' [ngStyle] = 'cssStyle.div'>
   <span [ngClass] =  "cssClass.label" [ngStyle]='cssStyle.label'>{{layout.label}}</span>
-  <div  [ngClass] =  "cssClass.div1" [ngStyle]='cssStyle.div1' *ngFor="let jControl of layout.controls">
-    <div  [ngClass] =  "cssClass.div2" [ngStyle]='cssStyle.div2' appGxDynamic [layout]="jControl" [parent]="parent"></div>
-  </div>
+  <ng-container  *ngFor="let jControl of layout.controls">
+    <ng-container  appGxDynamic [layout]="jControl" [parent]="parent"></ng-container>
+  </ng-container>
 </div>
