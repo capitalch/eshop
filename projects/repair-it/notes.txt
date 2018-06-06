@@ -1,0 +1,8 @@
+1. Home, Repair, Gallary and Contact has no information as to which Service Center I have selected
+2. Need to change gallary photos
+3. Submit button in repair and contact are misaligned
+4. There must me more information about the fields in the Repair and contact pages
+5. Node.js calls to track the visits
+6. After submit it shows an Alert box. The behavior should be: to show a message 
+there only for say 5 seconds and then disappear. Or the form should go in read only mode and there should be a message.
+

@@ -1,5 +1,5 @@
 <div [formGroup]='parent' [class]="layout.id" [ngClass]='cssClass.div' [ngStyle] = 'cssStyle.div'>
-  <label [for]='layout.id' [class]="cssClass.label" [ngStyle]='cssStyle.label'>
+  <label [for]='layout.id' [ngClass]="cssClass.label" [ngStyle]='cssStyle.label'>
     {{layout.label}}
     <abbr *ngIf="layout.validation && layout.validation.required && layout.label"
      style="color:red;" [ngClass] = 'cssClass.abbr' [ngStyle] = 'cssStyle.abbr'>*</abbr>
