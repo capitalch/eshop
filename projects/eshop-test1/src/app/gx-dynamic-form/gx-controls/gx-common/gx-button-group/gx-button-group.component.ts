@@ -9,6 +9,8 @@ import { FormGroup } from '@angular/forms';
 export class GxButtonGroupComponent implements OnInit {
   @Input() layout: any;
   @Input() parent: FormGroup;
+  cssClass: any = {};
+  cssStyle: any = {};
   constructor() { }
 
   ngOnInit() {

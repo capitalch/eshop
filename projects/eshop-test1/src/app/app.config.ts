@@ -3,7 +3,7 @@ const form1 = [
         type: 'meta'
         , client: {
             title: 'Test form'
-            , class: 'basic-style-1 custom1 validation-text'
+            , class: 'basic-style-1 custom1 basic-style-2 validation-text'
 
             // , validation: {
             //     // groupValidator1: { message: 'Data is not correct' }
@@ -22,6 +22,80 @@ const form1 = [
     }
     ,
     {
+        type: 'array'
+        , label: 'Tags'
+        , id: 'tags'
+        , class: {
+            div: 'array-div'
+            , button2: 'array-button2'
+        }
+        // , validation: {
+        //     // groupValidator1: { message: '$ are not correct' }
+        //     // ,
+        //     groupAsyncValidator1: {
+        //         message: 'Async validation failed'
+        //         , arg: {
+        //             url: 'http://localhost:3002/group'
+        //         }
+        //         , async: true
+        //     }
+        // }
+        , group: {
+            label: 'Tag'
+            // , validation: {
+            //     // groupValidator1: { message: '$ is not correct' }
+            //     // ,
+            //     groupAsyncValidator1: {
+            //         message: 'Async validation failed'
+            //         , arg: {
+            //             url: 'http://localhost:3002/group'
+            //         }
+            //         , async: true
+            //     }
+            // }
+            , controls: [
+                // {
+
+                {
+                    type: 'textarea'
+                    , id: 'firstName'
+                    , label: 'First name'
+                    , placeholder: 'First name'
+                    , value: ''
+                    , style: { color: 'red' }
+                    , class: { label: 'red-class', element: 'textarea-class' }
+                    // , validation: {
+                    //     required: { message: '$ is required' },
+                    //     minlength: { value: 3, message: 'Minimum length for $ is 3' },
+                    //     maxlength: { value: 10, message: 'Maximum length for $ is 10' }
+                    // }
+                }
+
+            ]
+        }
+    }
+    , {
+        type: 'buttongroup'
+        , id: 'button-group'
+        , controls: [
+            {
+                type: 'button'
+                , label: 'Submit2'
+                , class: 'btn btn-primary'
+                , id: 'submit2'
+                , validateForm: true
+            }
+            , {
+                type: 'button'
+                , subtype: 'reset'
+                , id: 'reset'
+                , label: 'Cancel'
+                , class: 'btn btn-primary'
+            }
+        ]
+    }
+    ,
+    {
         type: 'mat-input'
         , subtype: 'text'
         , id: 'id1'
@@ -37,42 +111,42 @@ const form1 = [
         }
     }
 
-    ,
-    {
-        type: 'mat-input'
-        , subtype: 'text'
-        , id: 'id2'
-        , name: 'myName1'
-        , label: 'First name1 label'
-        , placeholder: 'First name1 placeholder'
-        , value: ''
-        , class: 'label-name'
-        , style: {
-            'mat-label': { color: 'green' }
-            , input: { color: 'red' }
-        }
-        , remove: true
-        , validation: {
-            required: { message: '$ is required' }
-        }
-    }
-    ,
-    {
-        type: 'input'
-        , subtype: 'text'
-        , name: 'myName2'
-        , label: 'First name2'
-        , placeholder: 'First name2'
-        , value: ''
-        , style: {
-            label: { color: 'brown' }
-            , input: { color: 'red' }
-        }
-        // , remove: true
-        , validation: {
-            required: { message: '$ is required' }
-        }
-    }
+    // ,
+    // {
+    //     type: 'mat-input'
+    //     , subtype: 'text'
+    //     , id: 'id2'
+    //     , name: 'myName1'
+    //     , label: 'First name1 label'
+    //     , placeholder: 'First name1 placeholder'
+    //     , value: ''
+    //     , class: 'label-name'
+    //     , style: {
+    //         'mat-label': { color: 'green' }
+    //         , input: { color: 'red' }
+    //     }
+    //     , remove: true
+    //     , validation: {
+    //         required: { message: '$ is required' }
+    //     }
+    // }
+    // ,
+    // {
+    //     type: 'input'
+    //     , subtype: 'text'
+    //     , name: 'myName2'
+    //     , label: 'First name2'
+    //     , placeholder: 'First name2'
+    //     , value: ''
+    //     , style: {
+    //         label: { color: 'brown' }
+    //         , input: { color: 'red' }
+    //     }
+    //     // , remove: true
+    //     , validation: {
+    //         required: { message: '$ is required' }
+    //     }
+    // }
     // , {
     //     type: 'name-value-input'
     //     , options: 'names2'
