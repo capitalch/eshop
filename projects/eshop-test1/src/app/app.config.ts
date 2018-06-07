@@ -21,60 +21,60 @@ const form1 = [
         , id: 'gx-form1'
     }
 
-    ,
-    {
-        type: 'array'
-        , label: 'Tags'
-        , id: 'tags'
-        , class: {
-            div: 'array-div'
-            , button2: 'array-button2'
-        }
-        // , validation: {
-        //     // groupValidator1: { message: '$ are not correct' }
-        //     // ,
-        //     groupAsyncValidator1: {
-        //         message: 'Async validation failed'
-        //         , arg: {
-        //             url: 'http://localhost:3002/group'
-        //         }
-        //         , async: true
-        //     }
-        // }
-        , group: {
-            label: 'Tag'
-            // , validation: {
-            //     // groupValidator1: { message: '$ is not correct' }
-            //     // ,
-            //     groupAsyncValidator1: {
-            //         message: 'Async validation failed'
-            //         , arg: {
-            //             url: 'http://localhost:3002/group'
-            //         }
-            //         , async: true
-            //     }
-            // }
-            , controls: [
-                // {
+    // ,
+    // {
+    //     type: 'array'
+    //     , label: 'Tags'
+    //     , id: 'tags'
+    //     , class: {
+    //         div: 'array-div'
+    //         , button2: 'array-button2'
+    //     }
+    //     // , validation: {
+    //     //     // groupValidator1: { message: '$ are not correct' }
+    //     //     // ,
+    //     //     groupAsyncValidator1: {
+    //     //         message: 'Async validation failed'
+    //     //         , arg: {
+    //     //             url: 'http://localhost:3002/group'
+    //     //         }
+    //     //         , async: true
+    //     //     }
+    //     // }
+    //     , group: {
+    //         label: 'Tag'
+    //         // , validation: {
+    //         //     // groupValidator1: { message: '$ is not correct' }
+    //         //     // ,
+    //         //     groupAsyncValidator1: {
+    //         //         message: 'Async validation failed'
+    //         //         , arg: {
+    //         //             url: 'http://localhost:3002/group'
+    //         //         }
+    //         //         , async: true
+    //         //     }
+    //         // }
+    //         , controls: [
+    //             // {
 
-                {
-                    type: 'textarea'
-                    , id: 'firstName'
-                    , label: 'First name'
-                    , placeholder: 'First name'
-                    , value: ''
-                    , style: { color: 'red' }
-                    , class: { label: 'red-class', element: 'textarea-class' }
-                    // , validation: {
-                    //     required: { message: '$ is required' },
-                    //     minlength: { value: 3, message: 'Minimum length for $ is 3' },
-                    //     maxlength: { value: 10, message: 'Maximum length for $ is 10' }
-                    // }
-                }
+    //             {
+    //                 type: 'textarea'
+    //                 , id: 'firstName'
+    //                 , label: 'First name'
+    //                 , placeholder: 'First name'
+    //                 , value: ''
+    //                 , style: { color: 'red' }
+    //                 , class: { label: 'red-class', element: 'textarea-class' }
+    //                 // , validation: {
+    //                 //     required: { message: '$ is required' },
+    //                 //     minlength: { value: 3, message: 'Minimum length for $ is 3' },
+    //                 //     maxlength: { value: 10, message: 'Maximum length for $ is 10' }
+    //                 // }
+    //             }
 
-            ]
-        }
-    }
+    //         ]
+    //     }
+    // }
     , {
         type: 'buttongroup'
         , id: 'button-group'
@@ -98,22 +98,22 @@ const form1 = [
             }
         ]
     }
-    ,
-    {
-        type: 'mat-input'
-        , subtype: 'text'
-        , id: 'id1'
-        , name: 'myName'
-        , label: 'First name2'
-        , placeholder: 'First name2'
-        , value: ''
-        , class: 'myClass1'
-        // , style: { 'margin-top': '8px', 'width': '100%' }
-        // , remove: true
-        , validation: {
-            required: { message: '$ is required' }
-        }
-    }
+    // ,
+    // {
+    //     type: 'mat-input'
+    //     , subtype: 'text'
+    //     , id: 'id1'
+    //     , name: 'myName'
+    //     , label: 'First name2'
+    //     , placeholder: 'First name2'
+    //     , value: ''
+    //     , class: 'myClass1'
+    //     // , style: { 'margin-top': '8px', 'width': '100%' }
+    //     // , remove: true
+    //     , validation: {
+    //         required: { message: '$ is required' }
+    //     }
+    // }
 
     // ,
     // {
@@ -503,15 +503,15 @@ const form1 = [
     //         }
     //     ]
     // }
-    , {
-        type: 'mat-button'
-        , subType: 'raised'
-        , faClass: 'fa fa-taxi fa-fw'
-        , id: 'submit1'
-        , color: 'primary'
-        , label: 'Add'
-        , validateForm: true
-    }
+    // , {
+    //     type: 'mat-button'
+    //     , subType: 'raised'
+    //     , faClass: 'fa fa-taxi fa-fw'
+    //     , id: 'submit1'
+    //     , color: 'primary'
+    //     , label: 'Add'
+    //     , validateForm: true
+    // }
 
 ];
 export { form1 };
