@@ -11,12 +11,14 @@ export class GxCheckboxComponent implements OnInit {
 
   @Input() layout: any;
   @Input() parent: FormGroup;
-  classes: any = {};
+  cssClass: any = {};
+  cssStyle: any = {};
 
   constructor(private gxService: GxService, private fb: FormBuilder, private ref: ChangeDetectorRef) { }
 
   ngOnInit() {
-    this.gxService.createGenericControl(this.layout, this.parent);
+    this.gxService.createGenericControl1(this);
+    this.gxService.prepareCssClassAndStyle(this, 'input');
   }
 
 }

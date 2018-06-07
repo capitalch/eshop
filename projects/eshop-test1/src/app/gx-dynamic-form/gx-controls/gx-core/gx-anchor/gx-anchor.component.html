@@ -1,4 +1,3 @@
-<div [formGroup]='parent' [class] = "layout.id + '-box'">
-  <a [href] = "layout.href" [class] ="layout.id" [id] = "layout.id" 
-    [ngClass] = "layout.class" [ngStyle] = "layout.style">{{layout.label}}</a>
+<div [formGroup]='parent' [class]="layout.id" [ngClass]='cssClass.div' [ngStyle]='cssStyle.div'>
+  <a [href]="layout.href" [class]="layout.id" [id]="layout.id" [ngClass]="cssClass.a" [ngStyle]="cssStyle.a">{{layout.label}}</a>
 </div>

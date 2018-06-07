@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { GxService } from '../../../gx-service/gx.service';
 
 @Component({
   selector: 'app-gxbutton-group',
@@ -11,9 +12,10 @@ export class GxButtonGroupComponent implements OnInit {
   @Input() parent: FormGroup;
   cssClass: any = {};
   cssStyle: any = {};
-  constructor() { }
+  constructor(private gxService: GxService) { }
 
   ngOnInit() {
+    this.gxService.prepareCssClassAndStyle(this);
   }
 
 }

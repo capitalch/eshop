@@ -4,5 +4,6 @@
               [ngStyle]='layout.style' [formControlName]='layout.name'
               [value] = 'layout.value'>{{layout.label}}
   </label>
-  <app-gx-error [layout]='layout' [parent]='parent'></app-gx-error>
+  <small *ngIf="(control.invalid || control.errors) && (control.touched || control.dirty)">{{messages}}</small>
+  <!-- <app-gx-error [layout]='layout' [parent]='parent'></app-gx-error> -->
 </div>

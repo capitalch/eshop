@@ -20,7 +20,12 @@ const form1 = [
         }
         , id: 'gx-form1'
     }
-
+    , {
+        type: 'checkbox'
+        , id: 'agreed9'
+        , label: 'Agreed'
+        , value: true
+    }
     // ,
     // {
     //     type: 'array'
@@ -75,29 +80,7 @@ const form1 = [
     //         ]
     //     }
     // }
-    , {
-        type: 'buttongroup'
-        , id: 'button-group'
-        , style: { div: { 'text-align': 'right' } }
-        , controls: [
-            {
-                type: 'button'
-                , label: 'Submit2'
-                , class: 'btn btn-primary'
-                , id: 'submit2'
-                , validateForm: true
-                , style: { div: { display: 'inline-block' } }
-            }
-            , {
-                type: 'button'
-                , subtype: 'reset'
-                , id: 'reset'
-                , label: 'Cancel'
-                , class: 'btn btn-primary'
-                , style: { div: { display: 'inline-block' } }
-            }
-        ]
-    }
+
     // ,
     // {
     //     type: 'mat-input'
@@ -134,18 +117,7 @@ const form1 = [
     //         required: { message: '$ is required' }
     //     }
     // }
-    // , {
-    //     type: 'name-value-input'
-    //     , options: 'names2'
-    //     // , id: 'nv1'
 
-    // }
-    // , {
-    //     type: 'anchor'
-    //     , href: 'http://www.microsoft.com'
-    //     , label: 'Some label'
-
-    // }
     // , {
     //     type: 'mat-checkboxgroup'
     //     , label: 'Food3'
@@ -516,7 +488,7 @@ const form1 = [
 ];
 export { form1 };
 
-    // documentation
+    // documentation new
     // ,
     // {
     //     type: 'input'
@@ -543,8 +515,65 @@ export { form1 };
     //     , validateForm: true
     // }
 
+    // , {
+    //     type: 'buttongroup'
+    //     , id: 'button-group'
+    //     , style: { div: { 'text-align': 'right' } }
+    //     , controls: [
+    //         {
+    //             type: 'button'
+    //             , label: 'Submit2'
+    //             , class: 'btn btn-primary'
+    //             , id: 'submit2'
+    //             , validateForm: true
+    //             , style: { div: { display: 'inline-block' } }
+    //         }
+    //         , {
+    //             type: 'button'
+    //             , subtype: 'reset'
+    //             , id: 'reset'
+    //             , label: 'Cancel'
+    //             , class: 'btn btn-primary'
+    //             , style: { div: { display: 'inline-block' } }
+    //         }
+    //     ]
+    // }
 
+    /* dynamic prefix is used to denote the div, label, input and button
+    which are part of an input control. The input control is added dynamically and
+    style and class valued prefixed by dynamic will refer to corresponding controls of
+    that dynamic input control. Note that empty style must be put as {} and not ''
+    otherwise it will not work.
+    */
+//    , {
+//     type: 'name-value-input'
+//     , options: 'names2'
+//     , id: 'nv1'
+//     , class: {
+//         'dynamic-div': '',
+//         'dynamic-label': '',
+//         'dynamic-input': '',
+//         'dynamic-button': '',
+//         'dynamic-i': ''
+//     }
+//     , style: {
+//         'dynamic-div': {},
+//         'dynamic-label': { color: 'red', width: '30%' },
+//         'dynamic-input': { color: 'red', width: '50%' },
+//         'dynamic-button': {},
+//         'dynamic-i': {}
+//     }
+// }
 
+// , {
+//     type: 'anchor'
+//     , href: 'http://www.microsoft.com'
+//     , label: 'Some label'
+//     , class: ''
+//     , style: {
+//         a: { color: 'red' }
+//     }
+// }
 
 
 

@@ -1,6 +1,6 @@
-<div [class]="layout.id + '-box'">  
+<div [class]="layout.id" [ngClass]='cssClass.div' [ngStyle] = 'cssStyle.div'>  
   <mat-form-field *ngIf="!layout.options">
-    <input matInput
+    <input matInput [ngClass]='cssClass.input1' [ngStyle] = 'cssStyle.input1'
     [placeholder]='"name"' [(ngModel)]='name' required>
   </mat-form-field>
   
@@ -15,9 +15,10 @@
   </mat-form-field>
 
   <mat-form-field>
-    <input matInput
+    <input matInput [ngClass]='cssClass.input2' [ngStyle] = 'cssStyle.input2'
     [placeholder]='"value"' [(ngModel)]='value' required>
   </mat-form-field>
   
-  <button (click) = "addToParent()"><i class="fa fa-plus-square"></i></button>
+  <button (click) = "addToParent()" [ngClass]='cssClass.button' [ngStyle] = 'cssStyle.button'>
+    <i class="fa fa-plus-square" [ngClass]='cssClass.i' [ngStyle] = 'cssStyle.i'></i></button>
 </div>

@@ -13,6 +13,8 @@ import { MatSnackBar } from '@angular/material';
 export class GxNameValueInputComponent implements OnInit, OnDestroy {
   @Input() layout: any;
   @Input() parent: any;
+  cssClass: any = {};
+  cssStyle: any = {};
   name = '';
   value = '';
   parentType = '';
@@ -35,6 +37,7 @@ export class GxNameValueInputComponent implements OnInit, OnDestroy {
       const idx = this.names.indexOf(d.data);
       const a = (idx >= 0) && (this.names.splice(idx, 1));
     });
+    this.gxService.prepareCssClassAndStyle(this);
   }
 
   initAutoComplete() {
@@ -60,7 +63,6 @@ export class GxNameValueInputComponent implements OnInit, OnDestroy {
   }
 
   addToParent() {
-
     const f = () => {
       const nameValueId = this.layout.id;
       let controlsArray;
@@ -75,6 +77,20 @@ export class GxNameValueInputComponent implements OnInit, OnDestroy {
         , value: this.value
         , label: this.name
         , remove: true
+        , class: {
+          div: this.cssClass['dynamic-div'],
+          label: this.cssClass['dynamic-label'],
+          input: this.cssClass['dynamic-input'],
+          button: this.cssClass['dynamic-button'],
+          i: this.cssClass['dynamic-i']
+        }
+        , style: {
+          div: this.cssStyle['dynamic-div'],
+          label: this.cssStyle['dynamic-label'],
+          input: this.cssStyle['dynamic-input'],
+          button: this.cssStyle['dynamic-button'],
+          i: this.cssStyle['dynamic-i']
+        }
       };
       controlsArray.splice(index, 0, obj);
       this.name = '';
