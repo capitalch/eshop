@@ -1,0 +1,46 @@
+<form ngNativeValidate (submit)="contact()" class="contact-form">
+  <table class="contact-table">
+    <tr>
+      <td class="info" colspan="2">
+        {{info}}
+      </td>
+    </tr>
+    <tr class="row">
+      <td class="label-column">
+        <label>Name <span class="required">*</span></label>
+      </td>
+      <td class="entry-column">
+        <input class="name" type="text" required name="name" placeholder="Your Name" [(ngModel)]="bindingObj.name">
+      </td>
+    </tr>
+    <tr class="row">
+      <td class="label-column">
+        <label>Mobile <span class="required">*</span></label>
+      </td>
+      <td class="entry-column">
+        <input class="mobile" type="text" pattern="[0-9]*" required placeholder="Your Mobile" name="mobile" minlength="10" maxlength="10" [(ngModel)]="bindingObj.mobile">
+      </td>
+    </tr>
+    <tr class="row">
+      <td class="label-column">
+        <label>Email <span class="required">*</span></label>
+      </td>
+      <td class="entry-column">
+        <input class="email" type="email" required placeholder="Your Email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" name="email" [(ngModel)]="bindingObj.email">
+      </td>
+    </tr>
+    <tr class="row">
+      <td class="label-column">
+        <label>Message <span class="required">*</span></label>
+      </td>
+      <td class="entry-column">
+        <textarea class="message" rows="6" placeholder="Your Message" name="message" [(ngModel)]="bindingObj.message"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <button type="submit" mat-raised-button [disabled]=disableSubmit class="contact-button">Submit</button>
+      </td>
+    </tr>
+  </table>
+</form>

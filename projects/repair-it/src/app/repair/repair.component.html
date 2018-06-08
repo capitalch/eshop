@@ -1,0 +1,54 @@
+<form ngNativeValidate (submit)="repair()" class="repair-form">
+  <table class="repair-table">
+    <tr>
+      <td class="info" colspan="2">
+        {{info}}
+      </td>
+    </tr>
+    <tr class="row">
+      <td class="label-column">
+        <label>Name <span class="required">*</span></label>
+      </td>
+      <td class="entry-column">
+        <input class="name" type="text" required name="name" placeholder="Your Name" [(ngModel)]="bindingObj.name">
+      </td>
+    </tr>
+    <tr class="row">
+      <td class="label-column">
+        <label>Mobile <span class="required">*</span></label>
+      </td>
+      <td class="entry-column">
+        <input class="mobile" type="text" pattern="[0-9]*" placeholder="Your Mobile" required name="mobile" minlength="10" maxlength="10" [(ngModel)]="bindingObj.mobile">
+      </td>
+    </tr>
+    <tr class="row">
+      <td class="label-column">
+        <label>Email <span class="required">*</span></label>
+      </td>
+      <td class="entry-column">
+        <input class="email" type="email" required placeholder="Your Email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" name="email" [(ngModel)]="bindingObj.email">
+      </td>
+    </tr>
+    <tr class="row">
+      <td class="label-column">
+        <label>Product <span class="required">*</span></label>
+      </td>
+      <td class="entry-column">
+        <input class="product" required name="product" placeholder="Your Product" [(ngModel)]="bindingObj.product">
+      </td>
+    </tr>
+    <tr class="row">
+      <td class="label-column">
+        <label>Complaint <span class="required">*</span></label>
+      </td>
+      <td class="entry-column">
+        <textarea class="complaint" name="complaint" placeholder="Problem with the Product" [(ngModel)]="bindingObj.complaint"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <button type="submit" mat-raised-button [disabled]=disableSubmit class="repair-button">Submit</button>
+      </td>
+    </tr>
+  </table>
+</form>
