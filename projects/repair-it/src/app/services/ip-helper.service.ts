@@ -12,12 +12,10 @@ export class IpHelperService {
   constructor(private http: HttpClient) { }
 
   getIpAddress() {
-    // return this.http
-    //       .get('http://api.ipstack.com/check?access_key=6ac02503c0ecd2aea73e20ec478a8d80')
-    //       .map(response => response )
-    //       .catch(this.handleError);
-
-    return null;
+    return this.http
+          .get('http://api.ipstack.com/check?access_key=6ac02503c0ecd2aea73e20ec478a8d80')
+          .map(response => response )
+          .catch(this.handleError);
    }
 
    private handleError(error: HttpErrorResponse):Observable<any> {

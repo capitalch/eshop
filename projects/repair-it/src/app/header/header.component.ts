@@ -15,6 +15,7 @@ export class HeaderComponent implements OnInit {
   menus : any;
   showMenu: boolean = false;
   selectedMenu: any;
+  brand: any;
   
   constructor(private router: Router, private activatedRoute: ActivatedRoute ,private ibuki: IbukiService) { }  //
 
@@ -34,6 +35,17 @@ export class HeaderComponent implements OnInit {
       }
     });
     this.subs.add(sub1);
+
+    //Getting the brand selected by the user
+    const sub2 = this.ibuki.behFilterOn('brand').subscribe(d => {
+      if (d.error) {
+        console.log(d.error);
+      } else {
+        this.brand = d.data;
+      }
+    });
+    this.subs.add(sub2);
+
     this.headerData = HeaderInfo;
     this.menus = Menus;
   }
