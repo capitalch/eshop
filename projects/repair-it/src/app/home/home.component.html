@@ -1,0 +1,9 @@
+<div class="home">
+  <div class="home-content">
+    <div class="title">{{bindingObj.title}}</div>
+    <div class="details">{{bindingObj.content}}</div>
+  </div>
+  <div class="google-map">
+      <iframe class="map" [src]="bindingObj.location | safe: 'resourceUrl'" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
+</div>

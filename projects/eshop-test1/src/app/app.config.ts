@@ -442,51 +442,51 @@ const form1 = [
     //         }
     //     ]
     // }
-    // , {
-    //     type: 'submit'
-    //     , label: 'submit'
-    //     , class: 'btn btn-primary'
-    //     , actionId: 'submit'
-    // }
-    // , {
-    //     type: 'button'
-    //     , label: 'My Submit'
-    //     , class: 'btn btn-primary'
-    //     , id: 'mySubmit'
-    //     , validateForm: true
-    // }
-    //
-    // , {
-    //     type: 'buttongroup'
-    //     , class: ''
-    //     , id: 'button-group'
-    //     , controls: [
-    //         {
-    //             type: 'button'
-    //             , label: 'Submit2'
-    //             , class: 'btn btn-primary'
-    //             , id: 'submit2'
-    //             , validateForm: true
-    //         }
-    //         , {
-    //             type: 'button'
-    //             , subtype: 'reset'
-    //             , id: 'reset'
-    //             , label: 'Cancel'
-    //             , class: 'btn btn-primary'
-    //             , actionId: 'cancel1'
-    //         }
-    //     ]
-    // }
-    // , {
-    //     type: 'mat-button'
-    //     , subType: 'raised'
-    //     , faClass: 'fa fa-taxi fa-fw'
-    //     , id: 'submit1'
-    //     , color: 'primary'
-    //     , label: 'Add'
-    //     , validateForm: true
-    // }
+    , {
+        type: 'submit'
+        , label: 'submit'
+        , class: 'btn btn-primary'
+        , actionId: 'submit'
+    }
+    , {
+        type: 'button'
+        , label: 'My Submit'
+        , class: 'btn btn-primary'
+        , id: 'mySubmit'
+        , validateForm: true
+    }
+    
+    , {
+        type: 'buttongroup'
+        , class: ''
+        , id: 'button-group'
+        , controls: [
+            {
+                type: 'button'
+                , label: 'Submit2'
+                , class: 'btn btn-primary'
+                , id: 'submit2'
+                , validateForm: true
+            }
+            , {
+                type: 'button'
+                , subtype: 'reset'
+                , id: 'reset'
+                , label: 'Cancel'
+                , class: 'btn btn-primary'
+                , actionId: 'cancel1'
+            }
+        ]
+    }
+    , {
+        type: 'mat-button'
+        , subType: 'raised'
+        , faClass: 'fa fa-taxi fa-fw'
+        , id: 'submit1'
+        , color: 'primary'
+        , label: 'Add'
+        , validateForm: true
+    }
 
 ];
 export { form1 };

@@ -1,0 +1,15 @@
+<div class="brand-list-container">
+  <div class="brand-list">
+    <div class="brand" *ngFor="let brand of brands" (click)="selectBrand(brand.name)">
+      <a (click)="selectBrand(brand.name)">
+        <div class="brand-logo-container">
+            <img class="brand-logo" [src]="brand.logo">
+        </div>
+        <div class="brand-desc">
+            <div class="brand-name">{{brand.label}}</div>
+            <div class="brand-details"></div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

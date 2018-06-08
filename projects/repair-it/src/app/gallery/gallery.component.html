@@ -1,0 +1,9 @@
+<div class="image-container" >
+  <a (click)="showEnlargedContainer(image)" *ngFor="let image of images">
+    <img class="image" src={{image}}>
+  </a>
+</div>
+<div class="enlarged-image-container" *ngIf="enlarge">
+  <button class="close-enlarged-container" (click)="closeEnlargedContainer()">close</button>
+  <img src="{{enlargedImage}}">
+</div>

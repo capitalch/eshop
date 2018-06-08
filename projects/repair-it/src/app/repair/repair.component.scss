@@ -1,0 +1,68 @@
+.repair-form
+{
+    width: 31%;
+    margin: 0 auto;
+    padding-top: 34px;
+    .repair-table
+    {
+        .info
+        {
+            font-size: 0.8em;
+            text-align: justify;
+            padding-bottom: 12px;
+            color: #1b2598;
+        }
+        .row
+        {
+            display: inherit;
+            td
+            {
+                padding-top:10px;
+            }
+            .label-column
+            {
+                width:98px;
+                .required
+                {
+                    color:red;
+                }
+            }
+            .entry-column{
+                width:324px;
+                padding-bottom: 10px;
+                .name, .mobile, .email, .product, .complaint
+                {
+                    width:100%;
+                }
+                .complaint
+                {
+                    height: 150px;
+                }
+            }
+        }
+        .repair-button
+        {
+            border-radius: 4px;
+            float: right;
+            background: #bbb9b9;
+            transform: inherit;
+            position:inherit;
+            font-weight: bold;
+        }
+    }  
+} 
+::ng-deep snack-bar-container.success-class {
+    background: #1264f3;
+}
+  
+::ng-deep .success-class .mat-simple-snackbar {
+    color: white;
+}
+
+::ng-deep snack-bar-container.error-class {
+    background: red;
+}
+
+::ng-deep .error-class .mat-simple-snackbar {
+    color: white;
+}
