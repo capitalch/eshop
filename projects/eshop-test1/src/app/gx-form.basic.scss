@@ -13,7 +13,8 @@
     div {
         margin: 5px 8px 0 8px;
     }
-    i {
+    i,
+    small {
         margin-left: 5px;
     }
     label {
@@ -21,7 +22,11 @@
     }
     fieldset {
         border: 1px groove threedface; // padding: 5px;
-        margin: 5px;
+        margin: 5px; // for Array group
+        // div {
+        //     border-bottom: 1px solid darkorange;
+        //     padding: 5px;
+        // }
     }
     input[type=text]:not([matInput]),
     input[type=date]:not([matInput]),
@@ -58,12 +63,26 @@
     .label-name {
         width: 40%;
     }
+    //for div container having a button which is to be right aligned
+    .button-right {
+        text-align: right;
+    }
+}
+
+::ng-deep .basic-style-2 {
+    .array-button2 {
+        float: right;
+    }
+    .array-div {
+        border-bottom: 1px solid darkorange;
+        padding: 5px;
+    }
 }
 
 ::ng-deep .custom1 {
-    .id1, .id2 {
-        width: 80%;
-        // display: inline-block;
+    .id1,
+    .id2 {
+        width: 49%; // display: inline-block;
         label {
             width: 100%;
         }
@@ -73,6 +92,6 @@
     }
     button {
         display: inline-block;
-        margin-left:5px;
+        margin-left: 5px;
     }
 }

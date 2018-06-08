@@ -1,0 +1,9 @@
+<div [formGroup]='parent' [class] = "layout.id + '-box'">
+  <label [class] = "layout.id + '-label'">
+      <input type = 'checkbox'  [class]='layout.id' [ngClass] = 'layout.class'
+              [ngStyle]='layout.style' [formControlName]='layout.name'
+              [value] = 'layout.value'>{{layout.label}}
+  </label>
+  <small *ngIf="(control.invalid || control.errors) && (control.touched || control.dirty)">{{messages}}</small>
+  <!-- <app-gx-error [layout]='layout' [parent]='parent'></app-gx-error> -->
+</div>

@@ -1,0 +1,21 @@
+<fieldset [formGroup]="parent" [class]="layout.id" [ngClass]='cssClass.fieldset' [ngStyle] = 'cssStyle.fieldset'>
+  <legend [ngClass]='cssClass.legend' [ngStyle] = 'cssStyle.legend'>{{layout.label}}
+    <button (click)="addGroupInArray(layout)" color="primary" [ngClass]='cssClass.button1' [ngStyle] = 'cssStyle.button1'>
+      <i class="fa fa-plus-square" [ngClass]='cssClass.i1' [ngStyle] = 'cssStyle.i1'></i>
+    </button>
+  </legend>
+  <ng-container [formArrayName]="layout.name">
+    <ng-container *ngFor="let group of parent.get(layout.name)['controls'];let j= index">
+      <div  [ngClass]='cssClass.div' [ngStyle] = 'cssStyle.div' [formGroupName]="j">
+        <ng-container *ngFor="let jControl of layout.group.controls">
+          <button (click)="removeFromArray(j)" color="primary" [ngClass]='cssClass.button2' [ngStyle] = 'cssStyle.button2'>
+            <i class="fa fa-times-circle" [ngClass]='cssClass.i2' [ngStyle] = 'cssStyle.i2'></i>
+          </button>
+          <ng-container appGxDynamic [layout]="jControl" [parent]="group"></ng-container>
+        </ng-container>
+        <app-gx-error [layout]="layout.group" [control]="group"></app-gx-error>
+      </div>      
+    </ng-container>
+    <app-gx-error [layout]="layout" [parent]="parent"></app-gx-error>
+  </ng-container>
+</fieldset>

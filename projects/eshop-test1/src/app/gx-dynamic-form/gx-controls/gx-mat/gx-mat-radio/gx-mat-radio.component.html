@@ -1,0 +1,12 @@
+<fieldset [formGroup]='parent' [class] = "layout.id + '-box'">
+  <legend [class] = "layout.id + '-label'">{{layout.label}}</legend>
+      <mat-radio-group [formControlName]='layout.name'>
+          <ng-container *ngFor="let option of options">
+              <mat-radio-button [class]='layout.id' [ngClass] = 'layout.class'
+                  [ngStyle]='layout.style' [name] = "layout.name" [value] = "option.value">
+                      {{option.name}}
+              </mat-radio-button>
+          </ng-container>
+      </mat-radio-group>
+  <app-gx-error [layout]='layout' [parent]='parent'></app-gx-error>
+</fieldset>

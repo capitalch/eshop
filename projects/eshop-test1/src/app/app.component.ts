@@ -1,4 +1,4 @@
-import { Component , OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { form1 } from './app.config';
 import { GxCustomService } from './service/gx-custom.service';
 
@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
   title = 'app';
   myLayout: any = {};
 
+  constructor(private gxCustomService: GxCustomService) { }
   ngOnInit() {
     this.myLayout = form1;
   }

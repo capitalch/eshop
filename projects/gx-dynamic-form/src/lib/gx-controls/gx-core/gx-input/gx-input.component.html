@@ -11,5 +11,6 @@
     [ngClass] = 'cssClass.button'>
     <i class="fa fa-times-circle" [ngClass] = 'cssClass.i' [ngStyle] = 'cssStyle.i'></i>
   </button>
-  <app-gx-error [layout]='layout' [parent]='parent'></app-gx-error>
+  <small *ngIf="(control.invalid || control.errors) && (control.touched || control.dirty)">{{messages}}</small>
+  <!-- <app-gx-error [layout]='layout' [parent]='parent'></app-gx-error> -->
 </div>

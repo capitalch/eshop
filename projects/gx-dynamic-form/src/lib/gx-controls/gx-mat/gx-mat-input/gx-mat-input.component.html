@@ -1,7 +1,6 @@
-<!-- <span > -->
-  <mat-form-field [formGroup]='parent' [class]="layout.id" [ngClass]="cssClass['mat-form-field']" [ngStyle]="cssStyle['mat-form-field']">
-    <input matInput [class]='layout.id' [ngClass]=" cssClass[ 'input'] " [placeholder]='layout.placeholder' [ngStyle]="cssStyle[
-    'input'] " [formControlName]='layout.name' [value]="layout.value ">
-  </mat-form-field>
-  <!-- <app-gx-error [layout]="layout " [parent]="parent "></app-gx-error> -->
-<!-- </span> -->
+<mat-form-field [formGroup]='parent' [class]="layout.id" [ngClass]="cssClass['mat-form-field']" appearance='legacy' [ngStyle]="cssStyle['mat-form-field']">
+  <mat-label [class]="cssClass['mat-label']" [ngStyle]="cssStyle['mat-label']">{{layout.label}}</mat-label>
+  <input matInput [class]='layout.id' [ngClass]="cssClass['input']" [placeholder]='layout.placeholder' [ngStyle]="cssStyle[
+    'input'] " [formControlName]='layout.name' [value]="layout.value">
+  <mat-error *ngIf="(control.invalid || control.errors) && (control.touched || control.dirty)">{{messages}}</mat-error>
+</mat-form-field>

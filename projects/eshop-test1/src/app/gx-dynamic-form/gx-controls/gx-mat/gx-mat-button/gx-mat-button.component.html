@@ -1,0 +1,42 @@
+<div [ngSwitch]="layout.subType">
+  <span *ngSwitchCase="'raised'" [class] = "layout.id + '-box'">
+      <button (click)="buttonClicked()" mat-raised-button
+          [class]='layout.id' [ngClass] = 'layout.class' [ngStyle]='layout.style'
+          [color]="layout.color">
+          <span [class] = "layout.id + '-label'">{{layout.label}}</span>
+          <i *ngIf="layout.faClass" [class] = "layout.faClass"></i>
+      </button>
+  </span>
+  <span *ngSwitchCase="'icon'" [class] = "layout.id + '-box'">
+      <button (click)="buttonClicked()" mat-icon-button
+          [class]='layout.id' [ngClass] = 'layout.class' [ngStyle]='layout.style'
+          [color] = "layout.color">
+          <span [class] = "layout.id + '-label'">{{layout.label}}</span>
+          <i *ngIf="layout.faClass" [class] = "layout.faClass"></i>
+      </button>
+  </span>
+  <span *ngSwitchCase="'button'" [class] = "layout.id + '-box'">
+      <button (click)="buttonClicked()" mat-button
+          [class]='layout.id' [ngClass] = 'layout.class' [ngStyle]='layout.style'
+          [color] = "layout.color">
+          <span [class] = "layout.id + '-label'">{{layout.label}}</span>
+          <i *ngIf="layout.faClass" [class] = "layout.faClass"></i>
+      </button>
+  </span>
+  <span *ngSwitchCase="'fab'" [class] = "layout.id + '-box'">
+      <button (click)="buttonClicked()" mat-fab
+          [class]='layout.id' [ngClass] = 'layout.class' [ngStyle]='layout.style'
+          [color] = "layout.color" >
+          <span [class] = "layout.id + '-label'">{{layout.label}}</span>
+          <i *ngIf="layout.faClass" [class] = "layout.faClass"></i>
+      </button>
+  </span>
+  <span *ngSwitchCase="'mini-fab'" [class] = "layout.id + '-box'">
+      <button (click)="buttonClicked()" mat-mini-fab
+          [class]='layout.id' [ngClass] = 'layout.class' [ngStyle]='layout.style'
+          [color] = "layout.color" [ngClass] = "classes.elementClass" >
+          <span [class] = "layout.id + '-label'">{{layout.label}}</span>
+          <i *ngIf="layout.faClass" [class] = "layout.faClass"></i>
+      </button>
+  </span>
+</div>

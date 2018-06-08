@@ -1,0 +1,6 @@
+<mat-form-field [formGroup]='parent' [class]="layout.id" [ngClass]="cssClass['mat-form-field']" appearance='legacy' [ngStyle]="cssStyle['mat-form-field']">
+  <mat-label [ngClass]="cssClass['mat-label']" [ngStyle]="cssStyle['mat-label']">{{layout.label}}</mat-label>
+  <input matInput [ngClass]="cssClass['input']" [placeholder]='layout.placeholder' [ngStyle]="cssStyle[
+    'input'] " [formControlName]='layout.name' [value]="layout.value">
+  <mat-error *ngIf="(control.invalid || control.errors) && (control.touched || control.dirty)">{{messages}}</mat-error>
+</mat-form-field>

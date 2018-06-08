@@ -42,6 +42,17 @@ export class GxService {
     parent.setControl(layout.name, xControl);
   }
 
+  createGenericControl1(it) {
+    const allValidators = this.getValidators(it.layout);
+    it.control = this.fb.control(it.layout.value || '', allValidators.validators, allValidators.asyncValidators);
+    it.parent.setControl(it.layout.name, it.control);
+    const a = it.control.errors && Object.keys(it.control.errors).forEach(x => {
+      it.messages.push(it.layout.validation
+        && it.layout.validation[x] && it.layout.validation[x].message.replace('$', it.layout.label
+          || it.layout.placeholder || it.layout.name || it.layout.id));
+    });
+  }
+
   initCheckBoxGroup(it) {
     const childControls = {};
     const group: FormGroup = this.fb.group(childControls);

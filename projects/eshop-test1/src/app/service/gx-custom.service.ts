@@ -6,10 +6,10 @@ import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/first';
 import 'rxjs/add/operator/delay';
-import {GxService} from 'gx-dynamic-form';
-import {GxMapperService} from 'gx-dynamic-form';
 import { countries, genders1, food1, names1 } from './options-set';
 import { IbukiService } from 'ibuki';
+import { GxService } from '../gx-dynamic-form/gx-service/gx.service';
+import { GxMapperService } from '../gx-dynamic-form/gx-service/gx-mapper.service';
 @Injectable({
   providedIn: 'root'
 })

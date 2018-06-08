@@ -3,7 +3,7 @@ const form1 = [
         type: 'meta'
         , client: {
             title: 'Test form'
-            , class: 'basic-style-1 custom1 validation-text'
+            , class: 'basic-style-1 custom1 basic-style-2 validation-text'
 
             // , validation: {
             //     // groupValidator1: { message: 'Data is not correct' }
@@ -20,65 +20,104 @@ const form1 = [
         }
         , id: 'gx-form1'
     }
-    ,
-    {
-        type: 'mat-input'
-        , subtype: 'text'
-        , id: 'id1'
-        , name: 'myName'
-        , label: 'First name2'
-        , placeholder: 'First name2'
-        , value: ''
-        , class: 'myClass1'
-        // , style: { 'margin-top': '8px', 'width': '100%' }
-        // , remove: true
-        , validation: {
-            required: { message: '$ is required' }
-        }
+    , {
+        type: 'checkbox'
+        , id: 'agreed9'
+        , label: 'Agreed'
+        , value: true
     }
+    // ,
+    // {
+    //     type: 'array'
+    //     , label: 'Tags'
+    //     , id: 'tags'
+    //     , class: {
+    //         div: 'array-div'
+    //         , button2: 'array-button2'
+    //     }
+    //     // , validation: {
+    //     //     // groupValidator1: { message: '$ are not correct' }
+    //     //     // ,
+    //     //     groupAsyncValidator1: {
+    //     //         message: 'Async validation failed'
+    //     //         , arg: {
+    //     //             url: 'http://localhost:3002/group'
+    //     //         }
+    //     //         , async: true
+    //     //     }
+    //     // }
+    //     , group: {
+    //         label: 'Tag'
+    //         // , validation: {
+    //         //     // groupValidator1: { message: '$ is not correct' }
+    //         //     // ,
+    //         //     groupAsyncValidator1: {
+    //         //         message: 'Async validation failed'
+    //         //         , arg: {
+    //         //             url: 'http://localhost:3002/group'
+    //         //         }
+    //         //         , async: true
+    //         //     }
+    //         // }
+    //         , controls: [
+    //             // {
 
-    ,
-    {
-        type: 'mat-input'
-        , subtype: 'text'
-        , id: 'id2'
-        , name: 'myName1'
-        , label: 'First name1'
-        , placeholder: 'First name1'
-        , value: ''
-        , class: 'label-name'
-        // , style: { width: '40%' }
-        , remove: true
-        , validation: {
-            required: { message: '$ is required' }
-        }
-    }
-    ,
-    {
-        type: 'input'
-        , subtype: 'text'
-        , name: 'myName2'
-        , label: 'First name2'
-        , placeholder: 'First name2'
-        , value: ''
-        // , style: { width: '40%' }
-        // , remove: true
-        // , validation: {
-        //     required: { message: '$ is required' }
-        // }
-    }
-    // , {
-    //     type: 'name-value-input'
-    //     , options: 'names2'
-    //     // , id: 'nv1'
+    //             {
+    //                 type: 'textarea'
+    //                 , id: 'firstName'
+    //                 , label: 'First name'
+    //                 , placeholder: 'First name'
+    //                 , value: ''
+    //                 , style: { color: 'red' }
+    //                 , class: { label: 'red-class', element: 'textarea-class' }
+    //                 // , validation: {
+    //                 //     required: { message: '$ is required' },
+    //                 //     minlength: { value: 3, message: 'Minimum length for $ is 3' },
+    //                 //     maxlength: { value: 10, message: 'Maximum length for $ is 10' }
+    //                 // }
+    //             }
 
+    //         ]
+    //     }
     // }
-    // , {
-    //     type: 'anchor'
-    //     , href: 'http://www.microsoft.com'
-    //     , label: 'Some label'
 
+    // ,
+    // {
+    //     type: 'mat-input'
+    //     , subtype: 'text'
+    //     , id: 'id1'
+    //     , name: 'myName'
+    //     , label: 'First name2'
+    //     , placeholder: 'First name2'
+    //     , value: ''
+    //     , class: 'myClass1'
+    //     // , style: { 'margin-top': '8px', 'width': '100%' }
+    //     // , remove: true
+    //     , validation: {
+    //         required: { message: '$ is required' }
+    //     }
     // }
+
+    // ,
+    // {
+    //     type: 'mat-input'
+    //     , subtype: 'text'
+    //     , id: 'id2'
+    //     , name: 'myName1'
+    //     , label: 'First name1 label'
+    //     , placeholder: 'First name1 placeholder'
+    //     , value: ''
+    //     , class: 'label-name'
+    //     , style: {
+    //         'mat-label': { color: 'green' }
+    //         , input: { color: 'red' }
+    //     }
+    //     , remove: true
+    //     , validation: {
+    //         required: { message: '$ is required' }
+    //     }
+    // }
+
     // , {
     //     type: 'mat-checkboxgroup'
     //     , label: 'Food3'
@@ -413,13 +452,7 @@ const form1 = [
     //     , id: 'mySubmit'
     //     , validateForm: true
     // }
-    // , {
-    //     type: 'button'
-    //     , label: 'Cancel'
-    //     , class: 'btn btn-primary'
-    //     , actionId: 'submit1'
-    //     // , validateForm: true
-    // }
+    //
     // , {
     //     type: 'buttongroup'
     //     , class: ''
@@ -442,27 +475,105 @@ const form1 = [
     //         }
     //     ]
     // }
-    , {
-        type: 'mat-button'
-        , subType: 'raised'
-        , faClass: 'fa fa-taxi fa-fw'
-        , id: 'id100'
-        , color: 'primary'
-        , label: 'Add'
-        , actionId: 'submit2'
-        , validateForm: true
-    }
+    // , {
+    //     type: 'mat-button'
+    //     , subType: 'raised'
+    //     , faClass: 'fa fa-taxi fa-fw'
+    //     , id: 'submit1'
+    //     , color: 'primary'
+    //     , label: 'Add'
+    //     , validateForm: true
+    // }
 
 ];
 export { form1 };
 
-    // documentation
+    // documentation new
+    // ,
+    // {
+    //     type: 'input'
+    //     , subtype: 'text'
+    //     , name: 'myName2'
+    //     , label: 'First name2'
+    //     , placeholder: 'First name2'
+    //     , value: ''
+    //     , style: {
+    //         label: { color: 'brown' }
+    //         , input: { color: 'red' }
+    //     }
+    //     // , remove: true
+    //     , validation: {
+    //         required: { message: '$ is required' }
+    //     }
+    // }
 
+    // , {
+    //     type: 'button'
+    //     , label: 'Submit'
+    //     , class: { button: 'btn btn-primary', div: 'button-right' }
+    //     , id: 'submit1'
+    //     , validateForm: true
+    // }
 
+    // , {
+    //     type: 'buttongroup'
+    //     , id: 'button-group'
+    //     , style: { div: { 'text-align': 'right' } }
+    //     , controls: [
+    //         {
+    //             type: 'button'
+    //             , label: 'Submit2'
+    //             , class: 'btn btn-primary'
+    //             , id: 'submit2'
+    //             , validateForm: true
+    //             , style: { div: { display: 'inline-block' } }
+    //         }
+    //         , {
+    //             type: 'button'
+    //             , subtype: 'reset'
+    //             , id: 'reset'
+    //             , label: 'Cancel'
+    //             , class: 'btn btn-primary'
+    //             , style: { div: { display: 'inline-block' } }
+    //         }
+    //     ]
+    // }
 
+    /* dynamic prefix is used to denote the div, label, input and button
+    which are part of an input control. The input control is added dynamically and
+    style and class valued prefixed by dynamic will refer to corresponding controls of
+    that dynamic input control. Note that empty style must be put as {} and not ''
+    otherwise it will not work.
+    */
+//    , {
+//     type: 'name-value-input'
+//     , options: 'names2'
+//     , id: 'nv1'
+//     , class: {
+//         'dynamic-div': '',
+//         'dynamic-label': '',
+//         'dynamic-input': '',
+//         'dynamic-button': '',
+//         'dynamic-i': ''
+//     }
+//     , style: {
+//         'dynamic-div': {},
+//         'dynamic-label': { color: 'red', width: '30%' },
+//         'dynamic-input': { color: 'red', width: '50%' },
+//         'dynamic-button': {},
+//         'dynamic-i': {}
+//     }
+// }
 
-
-
+// , {
+//     type: 'anchor'
+//     , href: 'http://www.microsoft.com'
+//     , label: 'Some label'
+//     , class: ''
+//     , style: {
+//         a: { color: 'red' }
+//     }
+// }
 
 
 
