@@ -1,10 +1,13 @@
 .contact-form
 {
-    width: 31%;
+    width: 500px;
     margin: 0 auto;
-    padding-top: 65px;
+    padding-top: 34px;
     .contact-table
     {
+        width:100%;
+        border-collapse: separate;
+        border-spacing: 0 .5em;
         .info
         {
             font-size: 0.8em;
@@ -12,24 +15,21 @@
             padding-bottom: 12px;
             color: #1b2598;
         }
-        .row
+        .table-row
         {
-            display: inherit;
-            td
-            {
-                padding-top:10px;
-            }
             .label-column
             {
-                width:98px;
+                display: inline-block;
+                vertical-align: top;
+                width:100px;
                 .required
                 {
                     color:red;
                 }
             }
             .entry-column{
-                width:324px;
-                padding-bottom: 10px;
+                text-align: right;
+                width: 400px;
                 .name, .mobile, .email, .message
                 {
                     width:100%;

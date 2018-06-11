@@ -17,8 +17,8 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    this.ipService.getIpAddress().subscribe(data => {
-      console.log(data);
-    });
+    // this.ipService.getIpAddress().subscribe(data => {
+    //   console.log(data);
+    // });
   }
 }

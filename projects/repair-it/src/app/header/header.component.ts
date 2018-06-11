@@ -20,34 +20,37 @@ export class HeaderComponent implements OnInit {
   constructor(private router: Router, private activatedRoute: ActivatedRoute ,private ibuki: IbukiService) { }  //
 
   ngOnInit() {
-    this.subs = this.ibuki.filterOn('showMenu').subscribe(d => {
-      if (d.error) {
-        console.log(d.error);
-      } else {
-        this.showMenu = d.data
-      }
-    });
-    const sub1 = this.ibuki.filterOn('selectedMenu').subscribe(d => {
-      if (d.error) {
-        console.log(d.error);
-      } else {
-        this.selectedMenu = d.data
-      }
-    });
-    this.subs.add(sub1);
 
     //Getting the brand selected by the user
-    const sub2 = this.ibuki.behFilterOn('brand').subscribe(d => {
+    this.subs = this.ibuki.behFilterOn('brand').subscribe(d => {
       if (d.error) {
         console.log(d.error);
       } else {
         this.brand = d.data;
       }
     });
+    
+    const sub1 = this.ibuki.filterOn('showMenu').subscribe(d => {
+      if (d.error) {
+        console.log(d.error);
+      } else {
+        this.showMenu = d.data
+      }
+    });
+    this.subs.add(sub1);
+
+    const sub2 = this.ibuki.filterOn('selectedMenu').subscribe(d => {
+      if (d.error) {
+        console.log(d.error);
+      } else {
+        this.selectedMenu = d.data
+      }
+    });
     this.subs.add(sub2);
 
     this.headerData = HeaderInfo;
     this.menus = Menus;
+
   }
 
   navigate(menu)

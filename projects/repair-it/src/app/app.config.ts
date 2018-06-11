@@ -12,7 +12,7 @@ export const Urls = {
     gallery: 'gallery'
 };
 
-export const Menus = ["Home", "Repair", "Gallery", "Contact"];
+export const Menus = ["Repair", "Gallery", "Contact"];
 
 export const HeaderInfo = {
     "title": "Repair-it"
