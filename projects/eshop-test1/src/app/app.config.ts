@@ -25,6 +25,9 @@ const form1 = [
         , id: 'agreed9'
         , label: 'Agreed'
         , value: true
+        , validation: {
+            required: { message: '$ is required' }
+        }
     }
     // ,
     // {
