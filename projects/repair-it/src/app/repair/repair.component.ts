@@ -48,12 +48,12 @@ export class RepairComponent implements OnInit {
     this.emailHelper.repairEmail(this.bindingObj).subscribe(res => {
       let config = new MatSnackBarConfig();
       config.panelClass = 'success-class';
-      config.duration = 3000;
+      config.duration = 10000;
       this.snackBar.open(Setup.repairSuccessMsg, null, config);
     }, error => {
       let config = new MatSnackBarConfig();
       config.panelClass = 'error-class';
-      config.duration = 3000;
+      config.duration = 10000;
       this.snackBar.open(Setup.repairFailureMsg, null, config);
     });
 

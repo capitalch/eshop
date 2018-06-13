@@ -47,12 +47,12 @@ export class ContactComponent implements OnInit {
     this.emailHelper.contactEmail(this.bindingObj).subscribe(res => {
       let config = new MatSnackBarConfig();
       config.panelClass = 'success-class';
-      config.duration = 3000;
+      config.duration = 10000;
       this.snackBar.open(Setup.contactSuccessMsg, null, config);
     }, error => {
       let config = new MatSnackBarConfig();
       config.panelClass = 'error-class';
-      config.duration = 3000;
+      config.duration = 10000;
       this.snackBar.open(Setup.contactFailureMsg, null, config);
     });
     

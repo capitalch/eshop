@@ -525,7 +525,7 @@
             "polyfills": "projects/repair-it/src/polyfills.ts",
             "tsConfig": "projects/repair-it/tsconfig.app.json",
             "assets": [
-              "projects/repair-it/src/favicon.ico",
+              "projects/repair-it/src/assets/favicon.ico",
               "projects/repair-it/src/assets"
             ],
             "styles": [
@@ -585,7 +585,7 @@
             ],
             "scripts": [],
             "assets": [
-              "projects/repair-it/src/favicon.ico",
+              "projects/repair-it/src/assets/favicon.ico",
               "projects/repair-it/src/assets"
             ]
           }

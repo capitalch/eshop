@@ -71,7 +71,7 @@ export const BrandData = [{
 },
 {
     "brand": "Sony"
-    , "email": "navtcit@yahoo.com, mrityunjoy.in@gmail.com"
+    , "email": "navtcit@yahoo.com, mrityunjoy.in@gmail.com, capitalch@gmail.com"
     // ,"email": "sdipto1986@gmail.com, sudiptokush@gmail.com"
     , "home": [
         { "name": "title", "value": "Sony" }
