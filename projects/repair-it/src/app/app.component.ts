@@ -9,7 +9,7 @@ import {IpHelperService} from './services/ip-helper.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Repair-it';
+  title = 'Service Karao';
 
   constructor(private router: Router, private ipService: IpHelperService)
   {
@@ -17,8 +17,8 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    // this.ipService.getIpAddress().subscribe(data => {
-    //   console.log(data);
-    // });
+    this.ipService.getIpAddress().subscribe(data => {
+      console.log(data);
+    });
   }
 }

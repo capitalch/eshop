@@ -67,3 +67,27 @@
 ::ng-deep .error-class .mat-simple-snackbar {
     color: white;
 }
+
+.mat-raised-button[disabled][disabled] {
+    background-color: gray!important;
+}
+
+input:disabled
+{
+    background-color: #f3eded!important;
+}
+
+textarea:disabled
+{
+    background-color: #f3eded!important;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow:0 0 0 50px white inset; /* Change the color to your own background color */
+    -webkit-text-fill-color: black;
+}
+
+input:-webkit-autofill:disabled {
+    -webkit-box-shadow: 0 0 0 50px #f3eded inset;
+    -webkit-text-fill-color: rgb(84, 84, 84);
+} 

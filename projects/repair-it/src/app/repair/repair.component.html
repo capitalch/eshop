@@ -1,4 +1,4 @@
-<form ngNativeValidate (submit)="repair()" class="repair-form">
+<form ngNativeValidate (submit)="repair()" autocomplete="off" class="repair-form">
   <table class="repair-table">
     <tr>
       <td class="info" colspan="2">
@@ -10,7 +10,7 @@
         Name <span class="required">*</span>
       </td>
       <td class="entry-column">
-        <input class="name" type="text" required name="name" placeholder="Your Name" [(ngModel)]="bindingObj.name">
+        <input class="name" type="text" [disabled]="disableForm" required name="name" placeholder="Your Name" [(ngModel)]="bindingObj.name">
       </td>
     </tr>
     <tr class="table-row">
@@ -18,7 +18,7 @@
         Mobile <span class="required">*</span>
       </td>
       <td class="entry-column">
-        <input class="mobile" type="text" pattern="[0-9]*" placeholder="Your Mobile" required name="mobile" minlength="10" maxlength="10" [(ngModel)]="bindingObj.mobile">
+        <input class="mobile" type="text" [disabled]="disableForm" pattern="[0-9]*" placeholder="Your Mobile" required name="mobile" minlength="10" maxlength="10" [(ngModel)]="bindingObj.mobile">
       </td>
     </tr>
     <tr class="table-row">
@@ -26,7 +26,7 @@
         Email <span class="required">*</span>
       </td>
       <td class="entry-column">
-        <input class="email" type="email" required placeholder="Your Email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" name="email" [(ngModel)]="bindingObj.email">
+        <input class="email" type="email" [disabled]="disableForm" required placeholder="Your Email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" name="email" [(ngModel)]="bindingObj.email">
       </td>
     </tr>
     <tr class="table-row">
@@ -34,7 +34,7 @@
         Product <span class="required">*</span>
       </td>
       <td class="entry-column">
-        <input class="product" required name="product" placeholder="Your Product" [(ngModel)]="bindingObj.product">
+        <input class="product" required name="product" [disabled]="disableForm" placeholder="Your Product" [(ngModel)]="bindingObj.product">
       </td>
     </tr>
     <tr class="table-row">
@@ -42,12 +42,12 @@
         Complaint <span class="required">*</span>
       </td>
       <td class="entry-column">
-        <textarea class="complaint" name="complaint" placeholder="Problem with the Product" [(ngModel)]="bindingObj.complaint"></textarea>
+        <textarea class="complaint" name="complaint" [disabled]="disableForm" placeholder="Problem with the Product" [(ngModel)]="bindingObj.complaint"></textarea>
       </td>
     </tr>
     <tr>
       <td colspan="2">
-        <button type="submit" mat-raised-button [disabled]=disableSubmit class="repair-button">Submit</button>
+        <button type="submit" mat-raised-button [disabled]=disableForm class="repair-button">Submit</button>
       </td>
     </tr>
   </table>

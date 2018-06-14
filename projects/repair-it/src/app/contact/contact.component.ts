@@ -14,13 +14,13 @@ export class ContactComponent implements OnInit {
   subs: any;
   brand: any;
   bindingObj : IContact = {};
-  disableSubmit = false;
+  disableForm = false;
   info: any;
 
   constructor(private emailHelper: EmailHelperService, private ibuki: IbukiService, private snackBar: MatSnackBar) { }
 
   ngOnInit() {
-    this.disableSubmit = false;
+    this.disableForm = false;
 
     //Getting the brand selected by the user
     this.subs = this.ibuki.behFilterOn('brand').subscribe(d => {
@@ -56,7 +56,7 @@ export class ContactComponent implements OnInit {
       this.snackBar.open(Setup.contactFailureMsg, null, config);
     });
     
-    this.disableSubmit = !this.disableSubmit;
+    this.disableForm = !this.disableForm;
 
     this.bindingObj.name = '';
     this.bindingObj.mobile = '';

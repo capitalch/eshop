@@ -15,7 +15,7 @@ export const Urls = {
 export const Menus = ["Repair", "Gallery", "Contact"];
 
 export const HeaderInfo = {
-    "title": "Repair-it"
+    "title": "Service Karao"
     , "info": `This portal is a step towards transparency of repairs and service of electronic products. 
     We are in the process of assigning more and more service centers and stepping towards providing quality 
     service to customers.`

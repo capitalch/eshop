@@ -15,13 +15,13 @@ export class RepairComponent implements OnInit {
   subs: any;
   brand: any;
   bindingObj : IRepair = {};
-  disableSubmit = false;
+  disableForm = false;
   info: any;
 
   constructor(private emailHelper: EmailHelperService, private ibuki: IbukiService, private snackBar: MatSnackBar) { }
 
   ngOnInit() {
-    this.disableSubmit = false;
+    this.disableForm = false;
 
     //Getting the brand selected by the user
     this.subs = this.ibuki.behFilterOn('brand').subscribe(d => {
@@ -57,7 +57,7 @@ export class RepairComponent implements OnInit {
       this.snackBar.open(Setup.repairFailureMsg, null, config);
     });
 
-    this.disableSubmit = !this.disableSubmit;
+    this.disableForm = !this.disableForm;
 
     this.bindingObj.name = '';
     this.bindingObj.mobile = '';
