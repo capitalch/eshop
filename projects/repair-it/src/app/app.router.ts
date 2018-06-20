@@ -33,4 +33,4 @@ const routes: Routes = [
         component: RepairComponent
     }
 ];
-export const Routing: ModuleWithProviders = RouterModule.forRoot(routes);
+export const Routing: ModuleWithProviders = RouterModule.forRoot(routes, { useHash: true });

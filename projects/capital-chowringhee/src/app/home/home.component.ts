@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-import {BrandData} from '../app.config';
+import {Home} from '../app.config'
 import {IbukiService} from 'ibuki';
 
 @Component({
@@ -11,39 +10,18 @@ import {IbukiService} from 'ibuki';
 export class HomeComponent implements OnInit {
 
   subs : any;
-  brand: any;
-  brandHomeData: any;
-  bindingObj : any = {title:'', content:'', location: ''};
-  constructor(private router: Router, private activatedRoute: ActivatedRoute, private ibuki: IbukiService) { }
+  content : any;
+  carousel : any;
+  constructor(private ibuki: IbukiService) { }
 
   ngOnInit() {
-
-    //retrieving brand name from ibuki
-    this.subs = this.ibuki.behFilterOn('brand').subscribe(d => {
-      if (d.error) {
-        console.log(d.error);
-      } else {
-        this.brand = d.data;
-      }
-    });
-
-    this.ibuki.emit("showMenu", true);
-    this.ibuki.emit("selectedMenu", "Home");
-
-    //load data based on parameter
-    this.loadData();
-  }
-
-  loadData()
-  {
-    this.brandHomeData = BrandData.find(b=>b.brand==this.brand).home;
-    this.bindingObj.title = this.brandHomeData.find(t=>t.name == 'title').value;
-    this.bindingObj.content = this.brandHomeData.find(t=>t.name == 'content').value;
-    this.bindingObj.location = this.brandHomeData.find(t=>t.name == 'location').value;
+    this.ibuki.emit("selectedMenu", "home");
+    this.content = Home.content;
+    this.carousel = Home.carousel;
   }
 
   ngOnDestroy() {
-    this.subs.unsubscribe();
+
   }
 
 }

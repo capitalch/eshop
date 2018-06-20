@@ -1,0 +1,142 @@
+.top-container
+{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    height:70%;
+    .map-container
+    {
+        float:left;
+        width: 59%;
+        height: 355px;
+        border: 1px solid black;
+        border-radius: 2px;
+        iframe
+        {
+            width:100%;
+            height:100%;
+        }
+    }
+    .contact-container
+    {
+        float: right;
+        width: 40%;
+        border: 1px solid black;
+        border-radius: 7px;
+        padding-left: 10px;
+        padding-right: 10px;
+        .contact-form
+        {
+            padding-top: 5px;
+            .contact-table
+            {
+                width:100%;
+                border-collapse: separate;
+                border-spacing: 0 .5em;
+                font-size: .85em;
+                .info
+                {
+                    font-size: 0.8em;
+                    text-align: justify;
+                    padding-bottom: 12px;
+                }
+                .table-row
+                {
+                    .label-column
+                    {
+                        display: inline-block;
+                        vertical-align: top;
+                        width:100px;
+                        .required
+                        {
+                            color:red;
+                        }
+                    }
+                    .entry-column{
+                        text-align: right;
+                        width: 400px;
+                        .name, .mobile, .email, .message
+                        {
+                            width:100%;
+                        }
+                    }
+                }
+                .contact-button
+                {
+                    border-radius: 4px;
+                    float: right;
+                    background: black;
+                    color: white;
+                    transform: inherit;
+                    position:inherit;
+                    font-weight: bold;
+                }
+            }  
+        }
+    }
+}
+.bottom-container
+{
+    .contact-table
+    {
+        margin-left: 20px;
+        border: 1px solid black;
+        width: 57%;
+        float:left;
+        td 
+        {
+            text-align: center;
+            font-weight: bold;
+        }
+    }
+    .info
+    {
+        float: left;
+        margin: 25px;
+        li
+        {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+    }
+}
+
+::ng-deep snack-bar-container.success-class {
+    background: #1264f3;
+}
+    
+::ng-deep .success-class .mat-simple-snackbar {
+    color: white;
+}
+
+::ng-deep snack-bar-container.error-class {
+    background: red;
+}
+
+::ng-deep .error-class .mat-simple-snackbar {
+    color: white;
+}
+
+.mat-raised-button[disabled] {
+    background-color: gray!important;
+}
+
+input:disabled
+{
+    background-color: #f3eded!important;
+}
+
+textarea:disabled
+{
+    background-color: #f3eded!important;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow:0 0 0 50px white inset; /* Change the color to your own background color */
+    -webkit-text-fill-color: black;
+}
+
+input:-webkit-autofill:disabled {
+    -webkit-box-shadow: 0 0 0 50px #f3eded inset;
+    -webkit-text-fill-color: rgb(84, 84, 84);
+} 

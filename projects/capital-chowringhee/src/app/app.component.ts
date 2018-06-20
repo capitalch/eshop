@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, NavigationEnd, Event } from '@angular/router';
 import {Urls} from './app.config';
-import {IpHelperService} from './services/ip-helper.service';
 
 @Component({
   selector: 'app-root',
@@ -11,14 +10,11 @@ import {IpHelperService} from './services/ip-helper.service';
 export class AppComponent {
   title = 'Repair-it';
 
-  constructor(private router: Router, private ipService: IpHelperService)
+  constructor(private router: Router)
   {
-    this.router.navigate([Urls.selection]);
+    this.router.navigate([Urls.home]);
   }
 
   ngOnInit() {
-    // this.ipService.getIpAddress().subscribe(data => {
-    //   console.log(data);
-    // });
   }
 }

@@ -8,12 +8,20 @@ import { FormsModule } from '@angular/forms';
 import { Routing } from './app.router';
 import { HomeComponent } from './home/home.component';
 import { AngularMaterialModule } from 'angular-material';
+import { ProductsComponent } from './products/products.component';
+import { ContactComponent } from './contact/contact.component';
+import { SafePipe } from './pipes/safe.pipe';
+import { ServiceCenterComponent } from './service-center/service-center.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
+    ProductsComponent,
+    ContactComponent,
+    SafePipe,
+    ServiceCenterComponent
   ],
   imports: [
     BrowserModule

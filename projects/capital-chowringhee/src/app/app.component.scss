@@ -4,20 +4,21 @@
     width: 100vw;
     .header
     {
-        height:13%;
-        min-height: 85px;
+        height: 8%;
+        min-height: 56px;
     }
     .content
     { 
-        height: 80.5%;
-        background: #f3f3e1;
+        height: 85%;
+        min-height: 562px;
+        background: #e9e6ef;
     }
     .footer
     {
         height: 6.5%;
-        background:#212529;
+        background:#9575cd;
         text-align: center;
-        color: white;
+        color: black;
     }
 }
 

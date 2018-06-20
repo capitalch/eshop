@@ -1,0 +1,66 @@
+<div class="top-container">
+  <div class="map-container">
+      <iframe class="map" [src]="location | safe: 'resourceUrl'" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
+  <div class="contact-container">
+    <form ngNativeValidate (submit)="contact()" class="contact-form">
+      <table class="contact-table">
+        <tr>
+          <td class="info" colspan="2">
+            <strong>{{info}}</strong>
+          </td>
+        </tr>
+        <tr class="table-row">
+          <td class="label-column">
+            <label>Name <span class="required">*</span></label>
+          </td>
+          <td class="entry-column">
+            <input class="name" type="text" required name="name" [disabled]="disableForm" placeholder="Your Name" [(ngModel)]="bindingObj.name">
+          </td>
+        </tr>
+        <tr class="table-row">
+          <td class="label-column">
+            <label>Mobile <span class="required">*</span></label>
+          </td>
+          <td class="entry-column">
+            <input class="mobile" type="text" pattern="[0-9]*" [disabled]="disableForm" required placeholder="Your Mobile" name="mobile" minlength="10" maxlength="10" [(ngModel)]="bindingObj.mobile">
+          </td>
+        </tr>
+        <tr class="table-row">
+          <td class="label-column">
+            <label>Email <span class="required">*</span></label>
+          </td>
+          <td class="entry-column">
+            <input class="email" type="email" required [disabled]="disableForm" placeholder="Your Email" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$" name="email" [(ngModel)]="bindingObj.email">
+          </td>
+        </tr>
+        <tr class="table-row">
+          <td class="label-column">
+            <label>Message <span class="required">*</span></label>
+          </td>
+          <td class="entry-column">
+            <textarea class="message" rows="6" [disabled]="disableForm" placeholder="Your Message" name="message" [(ngModel)]="bindingObj.message"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <button type="submit" mat-raised-button [disabled]=disableForm class="contact-button">Submit</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>  
+</div>
+<div class="bottom-container">
+  <table class="contact-table">
+    <tr *ngFor="let contact of contactList">
+      <td>{{contact.product}}</td>
+      <td>{{contact.person}}</td>
+      <td>{{contact.number}}</td>
+    </tr>
+  </table>
+  <ul class="info">
+    <li> <strong> Landline: </strong> {{landline}}</li>
+    <li> <strong> Manager: </strong> {{managerInfo.name}}  -  {{managerInfo.number}}</li>
+  </ul>
+</div>

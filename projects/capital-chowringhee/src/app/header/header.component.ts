@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
   headerData: any;
   subs : any;
   menus : any;
-  selectedMenu: any;
+  selectedMenu: any = "Home";
   
   constructor(private router: Router, private activatedRoute: ActivatedRoute ,private ibuki: IbukiService) { }  //
 
@@ -26,8 +26,16 @@ export class HeaderComponent implements OnInit {
 
   navigate(menu)
   {
+    this.subs = this.ibuki.filterOn('selectedMenu').subscribe(d => {
+      if (d.error) {
+        console.log(d.error);
+      } else {
+        this.selectedMenu = d.data
+      }
+    });
+
     this.selectedMenu = menu;
-    this.router.navigate([menu.toLowerCase()]);
+    this.router.navigate([menu]);
   }
 
   ngOnDestroy() {

@@ -703,7 +703,7 @@
             "tsConfig": "projects/capital-chowringhee/tsconfig.spec.json",
             "karmaConfig": "projects/capital-chowringhee/karma.conf.js",
             "styles": [
-              "projects/capital-chowringhee/src/styles.css"
+              "projects/capital-chowringhee/src/styles.scss"
             ],
             "scripts": [],
             "assets": [
