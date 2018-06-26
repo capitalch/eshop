@@ -1,6 +1,6 @@
 .content
 {
-    height: 100vh;
+    // height: 100vh;
     width: 100vw;
     .header
     {
@@ -9,13 +9,12 @@
     }
     .content
     { 
-        height: 85%;
-        min-height: 562px;
+        min-height: 565px;
         background: #e9e6ef;
     }
     .footer
     {
-        height: 6.5%;
+        height: 40px;
         background:#9575cd;
         text-align: center;
         color: black;

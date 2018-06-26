@@ -7,6 +7,8 @@ export const Urls = {
 export const Menus = [{ name: "Home", path: "home"}, { name: "Products", path: "products"}, 
                       { name: "Contact/Complaint", path: "contact"},  { name: "Service Center", path: "service"}];
 
+
+
 export const HeaderInfo = {
     "title": "Capital Chowringhee"
 };
@@ -39,9 +41,142 @@ export const Home =
 
 export const Products =
 {
-    "DSLR": [{name:"Nikon 5000", image:""},],
-    "Smartphones": [] 
+    "category":[
+        {
+            name: "Camera",
+            image: "assets/products/camera.png",
+            product: [
+                        { brand:"Nikon", model:"A900", image:"assets/products/camera/nikon-A900.png", info:"" },
+                        { brand:"Nikon", model:"B500", image:"assets/products/camera/nikon-B500.png", info:"" },
+                        { brand:"Nikon", model:"Coolpix P900", image:"assets/products/camera/nikon-coolpix-P900.png", info:"" },
+                        { brand:"Nikon", model:"Coolpix A10", image:"assets/products/camera/nikon-coolpix-A10.png", info:"" },
+                        { brand:"Nikon", model:"Coolpix A100", image:"assets/products/camera/nikon-coolpix-A100.png", info:"" },
+                        { brand:"Nikon", model:"Coolpix A300", image:"assets/products/camera/nikon-coolpix-A300.png", info:"" },
+                        { brand:"Nikon", model:"Coolpix W100", image:"assets/products/camera/nikon-coolpix-W100.png", info:"" },
+                        { brand:"Nikon", model:"Coolpix W300", image:"assets/products/camera/nikon-coolpix-W300.png", info:"" },
+                        { brand:"Nikon", model:"D3400", image:"assets/products/camera/nikon-D3400.png", info:"" },
+                        { brand:"Nikon", model:"D500", image:"assets/products/camera/nikon-D500.png", info:"" },
+                        { brand:"Nikon", model:"D5300", image:"assets/products/camera/nikon-D5300.png", info:"" },
+                        { brand:"Nikon", model:"D5600", image:"assets/products/camera/nikon-D5600.png", info:"" },
+                        { brand:"Nikon", model:"D7200", image:"assets/products/camera/nikon-D7200.png", info:"" },
+                        { brand:"Nikon", model:"D750", image:"assets/products/camera/nikon-D750.png", info:"" },
+                        { brand:"Nikon", model:"D7500", image:"assets/products/camera/nikon-D7500.png", info:"" },
+                        { brand:"Nikon", model:"D850", image:"assets/products/camera/nikon-D850.png", info:"" },
+                        { brand:"Canon", model:"EOS 1300D", image:"assets/products/camera/canon-eos-1300D.png", info:"" },
+                        { brand:"Canon", model:"EOS 1500D", image:"assets/products/camera/canon-eos-1500D.png", info:"" },
+                        { brand:"Canon", model:"EOS 200D", image:"assets/products/camera/canon-eos-200D.png", info:"" },
+                        { brand:"Canon", model:"EOS 3000D", image:"assets/products/camera/canon-eos-3000D.png", info:"" },
+                        { brand:"Canon", model:"EOS 6D Mark-II", image:"assets/products/camera/canon-eos-6D-markII.png", info:"" },
+                        { brand:"Canon", model:"EOS 750D", image:"assets/products/camera/canon-eos-750D.png", info:"" },
+                        { brand:"Canon", model:"EOS 77D", image:"assets/products/camera/canon-eos-77D.png", info:"" },
+                        { brand:"Canon", model:"EOS 800D", image:"assets/products/camera/canon-eos-800D.png", info:"" },
+                        { brand:"Canon", model:"EOS 80D", image:"assets/products/camera/canon-eos-80D.png", info:"" },
+                        { brand:"Canon", model:"G9X Mark-II", image:"assets/products/camera/G9X-markII.png", info:"" },
+                        { brand:"Canon", model:"Ixus 185", image:"assets/products/camera/canon-ixus-185.png", info:"" },
+                        { brand:"Canon", model:"Ixus 190", image:"assets/products/camera/canon-ixus-190.png", info:"" },
+                        { brand:"Canon", model:"Ixus 285", image:"assets/products/camera/canon-ixus-285.png", info:"" },
+                        { brand:"Canon", model:"Powershot SX430", image:"assets/products/camera/canon-powershot-SX430.png", info:"" },
+                        { brand:"Canon", model:"Powershot SX540", image:"assets/products/camera/canon-powershot-SX540.png", info:"" },
+                        { brand:"Canon", model:"Powershot SX720", image:"assets/products/camera/canon-powershot-SX720.png", info:"" },
+                        { brand:"Sony", model:"Cybershot DSC-H300", image:"assets/products/camera/sony-cybershot-dsc-H300.png", info:"" },
+                        { brand:"Sony", model:"Cybershot DSC-RX100", image:"assets/products/camera/sony-cybershot-dsc-RX100.png", info:"" },
+                        { brand:"Sony", model:"Cybershot DSC-W800", image:"assets/products/camera/sony-cybershot-dsc-W800.png", info:"" },
+                        { brand:"Sony", model:"Cybershot DSC-W810", image:"assets/products/camera/sony-cybershot-dsc-W810.png", info:"" },
+                        { brand:"Sony", model:"Cybershot DSC-W220", image:"assets/products/camera/sony-cybershot-dsc-WX220.png", info:"" },
+                        { brand:"Sony", model:"Cybershot DSC-WX500", image:"assets/products/camera/sony-cybershot-dsc-WX500.png", info:"" },
+                        { brand:"Sony", model:"Alpha A68K", image:"assets/products/camera/sony-alpha-ilc-A68K.png", info:"" },
+                        { brand:"Sony", model:"Alpha A5000L", image:"assets/products/camera/sony-alpha-ilce-A5000L.png", info:"" },
+                        { brand:"Sony", model:"Alpha A5100L", image:"assets/products/camera/sony-alpha-ilce-A5100L.png", info:"" },
+                        { brand:"Sony", model:"Alpha A6000L", image:"assets/products/camera/sony-alpha-ilce-A6000L.png", info:"" },
+                        { brand:"Sony", model:"Alpha A6300L", image:"assets/products/camera/sony-alpha-ilce-A6300L.png", info:"" }
+                     ]
+        },
+        {
+            name: "Smartphone",
+            image: "assets/products/smartphones.png",
+            product: [
+                        { brand:"Mi", model:"MAX 2", image:"assets/products/smartphones/mi-max-2.png", info:"" },
+                        { brand:"Redmi", model:"Note 5", image:"assets/products/smartphones/redmi-note-5.png", info:"" },
+                        { brand:"Redmi", model:"Note 5 Pro", image:"assets/products/smartphones/redmi-note-5-pro.png", info:"" },
+                        { brand:"Redmi", model:"4", image:"assets/products/smartphones/redmi-4.png", info:"" },
+                        { brand:"Redmi", model:"4A", image:"assets/products/smartphones/redmi-4A.png", info:"" },
+                        { brand:"Redmi", model:"5", image:"assets/products/smartphones/redmi-5.png", info:"" },
+                        { brand:"Redmi", model:"5A", image:"assets/products/smartphones/redmi-5A.png", info:"" },
+                        { brand:"Redmi", model:"Y1", image:"assets/products/smartphones/redmi-Y1.png", info:"" },
+                        { brand:"Redmi", model:"Y1 lite", image:"assets/products/smartphones/redmi-Y1-lite.png", info:"" },
+                        { brand:"Nokia", model:"105", image:"assets/products/smartphones/nokia-105.png", info:"" },
+                        { brand:"Nokia", model:"130", image:"assets/products/smartphones/nokia-130.png", info:"" },
+                        { brand:"Nokia", model:"150", image:"assets/products/smartphones/nokia-150.png", info:"" },
+                        { brand:"Nokia", model:"N1066", image:"assets/products/smartphones/nokia-N1066.png", info:"" },
+                        { brand:"Nokia", model:"N216", image:"assets/products/smartphones/nokia-N216.png", info:"" },
+                        { brand:"Nokia", model:"N3310", image:"assets/products/smartphones/nokia-N3310.png", info:"" },
+                        { brand:"Nokia", model:"3", image:"assets/products/smartphones/nokia-3-1032.png", info:"" },
+                        { brand:"Oppo", model:"A37F", image:"assets/products/smartphones/oppo-A37F.png", info:"" },
+                        { brand:"Oppo", model:"A71", image:"assets/products/smartphones/oppo-A71.png", info:"" },
+                        { brand:"Oppo", model:"A83", image:"assets/products/smartphones/oppo-A83.png", info:"" },
+                        { brand:"Oppo", model:"F5", image:"assets/products/smartphones/oppo-F5.png", info:"" },
+                        { brand:"Oppo", model:"F7", image:"assets/products/smartphones/oppo-F7.png", info:"" },
+                        { brand:"Samsung", model:"A6", image:"assets/products/smartphones/samsung-A6.png", info:"" },
+                        { brand:"Samsung", model:"A6+", image:"assets/products/smartphones/samsung-A6-plus.png", info:"" },
+                        { brand:"Samsung", model:"A8+", image:"assets/products/smartphones/samsung-A8-plus.png", info:"" },
+                        { brand:"Samsung", model:"Guru FM Plus", image:"assets/products/smartphones/samsung-B110.png", info:"" },
+                        { brand:"Samsung", model:"Guru Music 2", image:"assets/products/smartphones/samsung-B310.png", info:"" },
+                        { brand:"Samsung", model:"Metro 313", image:"assets/products/smartphones/samsung-B313.png", info:"" },
+                        { brand:"Samsung", model:"Metro 350", image:"assets/products/smartphones/samsung-B351.png", info:"" },
+                        { brand:"Samsung", model:"Metro XL", image:"assets/products/smartphones/samsung-B355.png", info:"" },
+                        { brand:"Samsung", model:"Guru GT-E1200", image:"assets/products/smartphones/samsung-E1200.png", info:"" },
+                        { brand:"Samsung", model:"J2", image:"assets/products/smartphones/samsung-J2.png", info:"" },
+                        { brand:"Samsung", model:"J2 Pro", image:"assets/products/smartphones/samsung-J2-pro.png", info:"" },
+                        { brand:"Samsung", model:"J4", image:"assets/products/smartphones/samsung-J4.png", info:"" },
+                        { brand:"Samsung", model:"J5 Prime", image:"assets/products/smartphones/samsung-J5-prime.png", info:"" },
+                        { brand:"Samsung", model:"J6", image:"assets/products/smartphones/samsung-J6.png", info:"" },
+                        { brand:"Samsung", model:"J7 Nxt", image:"assets/products/smartphones/samsung-J7-nxt.png", info:"" },
+                        { brand:"Samsung", model:"J7 Duo", image:"assets/products/smartphones/samsung-J7-duo.png", info:"" },
+                        { brand:"Samsung", model:"J7 Pro", image:"assets/products/smartphones/samsung-J7-pro.png", info:"" },
+                        { brand:"Samsung", model:"J7 Prime", image:"assets/products/smartphones/samsung-J7-prime.png", info:"" },
+                        { brand:"Samsung", model:"On7", image:"assets/products/smartphones/samsung-On7-prime.png", info:"" },
+                        { brand:"Samsung", model:"On Max", image:"assets/products/smartphones/samsung-On-max.png", info:"" },
+                        { brand:"Samsung", model:"Galaxy Tab A7", image:"assets/products/smartphones/samsung-galaxy-tab-A7.png", info:"" },
+                        { brand:"Samsung", model:"Galaxy Note 3", image:"assets/products/smartphones/samsung-galaxy-note-3.png", info:"" }
+                     ]
+        },
+        {
+            name: "LED",
+            image: "assets/products/led-tv.png",
+            product: []
+        },
+        {
+            name: "Audio System",
+            image: "assets/products/audio-system.png",
+            product: []
+        },
+        {
+            name: "Refrigerator",
+            image: "assets/products/refrigerator.png",
+            product: []
+        },
+        {
+            name: "Washing Machine",
+            image: "assets/products/washing-machine.png",
+            product: []
+        },
+        {
+            name: "Calculator",
+            image: "assets/products/calculator.png",
+            product: []
+        }
+    ]
+        
 };
+
+export const Service = [
+                        {brand:"", name:"", address:"", phone:"", email:""},
+                        {brand:"", name:"", address:"", phone:"", email:""},
+                        {brand:"", name:"", address:"", phone:"", email:""},
+                        {brand:"", name:"", address:"", phone:"", email:""},
+                        {brand:"", name:"", address:"", phone:"", email:""},
+                        {brand:"", name:"", address:"", phone:"", email:""}
+                       ]
 
 export const Contact = 
 {

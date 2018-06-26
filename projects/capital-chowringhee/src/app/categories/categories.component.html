@@ -1,0 +1,8 @@
+<div class="category-container">
+    <div class="category" *ngFor="let category of categories">
+      <a (click)="selectCategory(category.name)">
+      <div class="image-container"><img class="image" [src]="category.image"></div>
+      <div class="title">{{category.name}}</div>
+      </a>
+    </div>
+</div>

@@ -3,6 +3,7 @@ import { ModuleWithProviders } from '@angular/core';
 import {HomeComponent} from './home/home.component';
 import {ProductsComponent} from './products/products.component';
 import {ContactComponent} from './contact/contact.component';
+import {CategoriesComponent} from './categories/categories.component';
 import {ServiceCenterComponent} from './service-center/service-center.component';
 
 const routes: Routes = [
@@ -17,7 +18,7 @@ const routes: Routes = [
     } 
     ,{   
         path: 'products', 
-        component: ProductsComponent
+        component: CategoriesComponent
     }
     ,{   
         path: 'contact', 
@@ -26,6 +27,10 @@ const routes: Routes = [
     ,{   
         path: 'service', 
         component: ServiceCenterComponent
+    }
+    ,{
+        path: 'productsList',
+        component: ProductsComponent
     }
 ];
 export const Routing: ModuleWithProviders = RouterModule.forRoot(routes, { useHash: true });

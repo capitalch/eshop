@@ -12,6 +12,7 @@ import { ProductsComponent } from './products/products.component';
 import { ContactComponent } from './contact/contact.component';
 import { SafePipe } from './pipes/safe.pipe';
 import { ServiceCenterComponent } from './service-center/service-center.component';
+import { CategoriesComponent } from './categories/categories.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ServiceCenterComponent } from './service-center/service-center.componen
     ProductsComponent,
     ContactComponent,
     SafePipe,
-    ServiceCenterComponent
+    ServiceCenterComponent,
+    CategoriesComponent
   ],
   imports: [
     BrowserModule

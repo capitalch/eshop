@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
   headerData: any;
   subs : any;
   menus : any;
-  selectedMenu: any = "Home";
+  selectedMenu: any = "home";
   
   constructor(private router: Router, private activatedRoute: ActivatedRoute ,private ibuki: IbukiService) { }  //
 
