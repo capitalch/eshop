@@ -22,13 +22,11 @@
     {
         float: right;
         width: 40%;
+        height: 354px;
         border: 1px solid black;
         border-radius: 7px;
-        padding-left: 10px;
-        padding-right: 10px;
         .contact-form
         {
-            padding-top: 5px;
             .contact-table
             {
                 width:100%;
@@ -39,7 +37,7 @@
                 {
                     font-size: 0.8em;
                     text-align: justify;
-                    padding-bottom: 12px;
+                    padding: 8px;
                 }
                 .table-row
                 {
@@ -48,6 +46,7 @@
                         display: inline-block;
                         vertical-align: top;
                         width:100px;
+                        text-align: center;
                         .required
                         {
                             color:red;
@@ -55,7 +54,8 @@
                     }
                     .entry-column{
                         text-align: right;
-                        width: 400px;
+                        width: 425px;
+                        padding-right:20px;
                         .name, .mobile, .email, .message
                         {
                             width:100%;
@@ -71,6 +71,7 @@
                     transform: inherit;
                     position:inherit;
                     font-weight: bold;
+                    margin-right:19px;
                 }
             }  
         }
@@ -79,7 +80,8 @@
 .bottom-container
 {
     display: flow-root;
-    margin-top: 30px;
+    margin-top: 39px;
+    height: 30%;
     .contact-table
     {
         margin-left: 20px;
