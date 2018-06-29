@@ -654,7 +654,7 @@
               "node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "node_modules/font-awesome/scss/font-awesome.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "projects/capital-chowringhee/src/styles.scss"
+              "projects/capital-chowringhee/src/styles/styles.scss"
             ],
             "scripts": []
           },

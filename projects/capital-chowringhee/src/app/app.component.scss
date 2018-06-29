@@ -1,3 +1,5 @@
+@import '../styles/variables';
+
 .display-content
 {
     width: 100vw;
@@ -11,7 +13,7 @@
     { 
         height: 100.5%;
         width: 100%;
-        background: #dee2c8;
+        background: $emart-body-color;
         padding-top: 58px;
         padding-bottom: 22px;
         display: inline-table;
@@ -19,7 +21,7 @@
     .footer
     {
         height: 5%;
-        background:#e5e692;
+        background:$emart-footer-color;
         text-align: center;
         color: black;
     }
