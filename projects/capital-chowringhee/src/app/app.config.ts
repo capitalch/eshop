@@ -5,7 +5,7 @@ export const Urls = {
 };
 
 export const Menus = [{ name: "Home", path: "home"}, { name: "Products", path: "products"}, 
-                      { name: "Contact/Complaint", path: "contact"},  { name: "Service Center", path: "service"}];
+                      { name: "Contact/Complaint", path: "contact"},  { name: "Service Centers", path: "service"}];
 
 
 
@@ -36,14 +36,14 @@ export const Home =
     In year 1991 the business of Capital Chowringhee was started at the same place by elder son of Shree Krishna Swaroop Agarwal. Later on in year 2005 the business was converted to private limited company. The business boomed but Capital Chowringhee never preferred to expand to multiple branches. There was stiff competition in electronic goods. The company preferred to give emphasis on digital cameras and mobile phones. Off late Capital Chowringhee decided to penetrate in E-Commerce business and they are moving forward to do so.
     <\/p>`,
 
-    "carousel": ['assets/carousel/1.png','assets/carousel/2.png','assets/carousel/3.png']
+    "carousel": ['assets/carousel/1.png','assets/carousel/2.png','assets/carousel/3.png','assets/carousel/4.png']
 };
 
 export const Products =
 {
     "category":[
         {
-            name: "Camera",
+            name: "Cameras",
             image: "assets/products/camera.png",
             product: [
                         { brand:"Nikon", model:"A900", image:"assets/products/camera/nikon-A900.png", info:"" },
@@ -92,7 +92,7 @@ export const Products =
                      ]
         },
         {
-            name: "Smartphone",
+            name: "Smartphones",
             image: "assets/products/smartphones.png",
             product: [
                         { brand:"Mi", model:"MAX 2", image:"assets/products/smartphones/mi-max-2.png", info:"" },
@@ -141,41 +141,292 @@ export const Products =
                      ]
         },
         {
-            name: "LED",
+            name: "LEDs",
             image: "assets/products/led-tv.png",
-            product: []
+            product: [
+                        { brand:"LG", model:"LG24LH454A", image:"assets/products/led/LG24LH454A.png", info:"" },
+                        { brand:"LG", model:"24LJ470A", image:"assets/products/led/24LJ470A.png", info:"" },
+                        { brand:"LG", model:"32LJ523D", image:"assets/products/led/32LJ523D.png", info:"" },
+                        { brand:"Panasonic", model:"32ES500D", image:"assets/products/led/32ES500D.png", info:"" },
+                        { brand:"Samsung", model:"UA24H4003ARLXL", image:"assets/products/led/UA24H4003ARLXL.png", info:"" },
+                        { brand:"Samsung", model:"UA24H4003ARMXL", image:"assets/products/led/UA24H4003ARMXL.png", info:"" },
+                        { brand:"Samsung", model:"UA28H4000ARLXL", image:"assets/products/led/UA28H4000ARLXL.png", info:"" },
+                        { brand:"Samsung", model:"UA28H4100ARLXL", image:"assets/products/led/UA28H4100ARLXL.png", info:"" },
+                        { brand:"Samsung", model:"UA32J5100", image:"assets/products/led/UA32J5100.png", info:"" },
+                        { brand:"Samsung", model:"UA55M5570AULXL", image:"assets/products/led/UA55M5570AULXL.png", info:"" },
+                        { brand:"Sony", model:"32R302E", image:"assets/products/led/32R302E.png", info:"" },
+                        { brand:"Sony", model:"KLV24P413D", image:"assets/products/led/KLV24P413D.png", info:"" },
+                        { brand:"Sony", model:"KLV32R202F", image:"assets/products/led/KLV32R202F.png", info:"" },
+                        { brand:"Sony", model:"KLV32R302E", image:"assets/products/led/KLV32R302E.png", info:"" },
+                        { brand:"Sony", model:"KLV32R302F", image:"assets/products/led/KLV32R302F.png", info:"" },
+                        { brand:"Sony", model:"KLV32R412D", image:"assets/products/led/KLV32R412D.png", info:"" },
+                        { brand:"Sony", model:"KLV32R422F", image:"assets/products/led/KLV32R422F.png", info:"" },
+                        { brand:"Sony", model:"KLV32W622F", image:"assets/products/led/KLV32W622F.png", info:"" },
+                        { brand:"Sony", model:"KLV40R252F", image:"assets/products/led/KLV40R252F.png", info:"" }
+                    ]
         },
         {
-            name: "Audio System",
+            name: "Audio Systems",
             image: "assets/products/audio-system.png",
-            product: []
+            product: [
+                        { brand:"Clarion", model:"JM-2180", image:"assets/products/audio-system/JM-2180.png", info:"" },
+                        { brand:"Clarion", model:"JM5060", image:"assets/products/audio-system/JM5060.png", info:"" },
+                        { brand:"Creative", model:"A120", image:"assets/products/audio-system/A120.png", info:"" },
+                        { brand:"Creative", model:"E2400", image:"assets/products/audio-system/E2400.png", info:"" },
+                        { brand:"Enter", model:"E-BS300", image:"assets/products/audio-system/E-BS300.png", info:"" },
+                        { brand:"iBall", model:"BT14", image:"assets/products/audio-system/BT14.png", info:"" },
+                        { brand:"iBall", model:"BT20", image:"assets/products/audio-system/BT20.png", info:"" },
+                        { brand:"JBL", model:"CLIP2", image:"assets/products/audio-system/CLIP2.png", info:"" },
+                        { brand:"JBL", model:"FLIP-IV", image:"assets/products/audio-system/FLIP-IV.png", info:"" },
+                        { brand:"JBL", model:"GO2", image:"assets/products/audio-system/GO2.png", info:"" },
+                        { brand:"Logitech", model:"Z313", image:"assets/products/audio-system/Z313.png", info:"" },
+                        { brand:"Philips", model:"BT40", image:"assets/products/audio-system/BT40.png", info:"" },
+                        { brand:"Philips", model:"BT4200", image:"assets/products/audio-system/BT4200.png", info:"" },
+                        { brand:"Philips", model:"BT50", image:"assets/products/audio-system/BT50.png", info:"" },
+                        { brand:"Philips", model:"BT64A", image:"assets/products/audio-system/BT64A.png", info:"" },
+                        { brand:"Philips", model:"MMS2580", image:"assets/products/audio-system/MMS2580.png", info:"" },
+                        { brand:"Philips", model:"MMS4040F", image:"assets/products/audio-system/MMS4040F.png", info:"" },
+                        { brand:"Philips", model:"SPA50B", image:"assets/products/audio-system/SPA50B.png", info:"" },
+                        { brand:"Philips", model:"SPA60", image:"assets/products/audio-system/SPA60.png", info:"" },
+                        { brand:"Philips", model:"SPA8140", image:"assets/products/audio-system/SPA8140.png", info:"" },
+                        { brand:"Philips", model:"SAD10", image:"assets/products/audio-system/SAD10.png", info:"" },
+                        { brand:"Philips", model:"SRS-XB10", image:"assets/products/audio-system/SRS-XB10.png", info:"" }
+                     ]
         },
         {
-            name: "Refrigerator",
+            name: "Refrigerators",
             image: "assets/products/refrigerator.png",
-            product: []
+            product: [
+                        { brand:"LG", model:"GLB201AMHL", image:"assets/products/refrigerator/GLB201AMHL.png", info:"" },
+                        { brand:"LG", model:"GLD191KSHV", image:"assets/products/refrigerator/GLD191KSHV.png", info:"" },
+                        { brand:"Samsung", model:"RR19J2413VJ", image:"assets/products/refrigerator/RR19J2413VJ.png", info:"" },
+                        { brand:"Samsung", model:"RR19N1112UZ", image:"assets/products/refrigerator/RR19N1112UZ.png", info:"" },
+                        { brand:"Samsung", model:"RR19N1Y12MR", image:"assets/products/refrigerator/RR19N1Y12MR.png", info:"" },
+                        { brand:"Samsung", model:"RR20M172YU3", image:"assets/products/refrigerator/RR20M172YU3.png", info:"" },
+                        { brand:"Samsung", model:"RR20M272ZU2", image:"assets/products/refrigerator/RR20M272ZU2.png", info:"" },
+                        { brand:"Samsung", model:"RR20N2Y1ZSE-NL", image:"assets/products/refrigerator/RR20N2Y1ZSE-NL.png", info:"" },
+                        { brand:"Samsung", model:"RT26H3000PX", image:"assets/products/refrigerator/RT26H3000PX.png", info:"" }
+                     ]
         },
         {
-            name: "Washing Machine",
-            image: "assets/products/washing-machine.png",
-            product: []
+            name: "A.C",
+            image: "assets/products/ac.png",
+            product: [
+                        { brand:"BlueStar", model:"5W18GA", image:"assets/products/ac/5W18GA.png", info:"" },
+                        { brand:"BlueStar", model:"3HW18FBTU", image:"assets/products/ac/3HW18FBTU.png", info:"" },
+                        { brand:"Daikin", model:"FTL35TV16W", image:"assets/products/ac/FTL35TV16W.png", info:"" },
+                        { brand:"Daikin", model:"FTKG50TV16U", image:"assets/products/ac/FTKG50TV16U.png", info:"" },
+                        { brand:"Daikin", model:"DTC50SRV162B", image:"assets/products/ac/DTC50SRV162B.png", info:"" },
+                        { brand:"Daikin", model:"FTL35TV16W1", image:"assets/products/ac/FTL35TV16W1.png", info:"" },
+                        { brand:"Hitachi", model:"RAU518KWD", image:"assets/products/ac/RAU518KWD.png", info:"" },
+                        { brand:"Hitachi", model:"RAV513HUD", image:"assets/products/ac/RAV513HUD.png", info:"" },
+                        { brand:"Hitachi", model:"RMC324HBD", image:"assets/products/ac/RMC324HBD.png", info:"" },
+                        { brand:"Lloyd", model:"LS13A3", image:"assets/products/ac/LS13A3.png", info:"" },
+                        { brand:"Lloyd", model:"LS13A3AF", image:"assets/products/ac/LS13A3AF.png", info:"" },
+                        { brand:"Lloyd", model:"LS19A5CX", image:"assets/products/ac/LS19A5CX.png", info:"" },
+                        { brand:"Mitsubishi", model:"MSHK13VA", image:"assets/products/ac/MSHK13VA.png", info:"" },
+                        { brand:"OGeneral", model:"AXGT24FHTA", image:"assets/products/ac/AXGT24FHTA.png", info:"" },
+                        { brand:"Samsung", model:"AR12MV3", image:"assets/products/ac/AR12MV3.png", info:"" },
+                        { brand:"Voltas", model:"183IZI", image:"assets/products/ac/183IZI.png", info:"" },
+                        { brand:"Voltas", model:"SAC123LZH", image:"assets/products/ac/SAC123LZH.png", info:"" },
+                        { brand:"Voltas", model:"SAC183CZA", image:"assets/products/ac/SAC183CZA.png", info:"" },
+                        { brand:"Voltas", model:"SAC183SY", image:"assets/products/ac/SAC183SY.png", info:"" },
+                        { brand:"Voltas", model:"WAC183CZP", image:"assets/products/ac/WAC183CZP.png", info:"" }
+                     ]
         },
         {
-            name: "Calculator",
+            name: "Calculators",
             image: "assets/products/calculator.png",
-            product: []
+            product: [
+                        { brand:"Casio", model:"DJ-120D-PLUS", image:"assets/products/calculator/DJ-120D-PLUS.png", info:"" }, 
+                        { brand:"Casio", model:"DJ-220D-PLUS", image:"assets/products/calculator/DJ-220D-PLUS.png", info:"" }, 
+                        { brand:"Casio", model:"DJ-240D-PLUS", image:"assets/products/calculator/DJ-240D-PLUS.png", info:"" }, 
+                        { brand:"Casio", model:"DR-120", image:"assets/products/calculator/DR-120.png", info:"" }, 
+                        { brand:"Casio", model:"FC200", image:"assets/products/calculator/FC200.png", info:"" }, 
+                        { brand:"Casio", model:"FX100MS", image:"assets/products/calculator/FX100MS.png", info:"" }, 
+                        { brand:"Casio", model:"FX-82ES-PLUS", image:"assets/products/calculator/FX-82ES-PLUS.png", info:"" }, 
+                        { brand:"Casio", model:"FX82MS", image:"assets/products/calculator/FX82MS.png", info:"" }, 
+                        { brand:"Casio", model:"FX82-SOLAR", image:"assets/products/calculator/FX82-SOLAR.png", info:"" }, 
+                        { brand:"Casio", model:"FX-991ES-PLUS", image:"assets/products/calculator/FX-991ES-PLUS.png", info:"" }, 
+                        { brand:"Casio", model:"FX-991EX", image:"assets/products/calculator/FX-991EX.png", info:"" }, 
+                        { brand:"Casio", model:"FX-991MS", image:"assets/products/calculator/FX-991MS.png", info:"" }, 
+                        { brand:"Casio", model:"HL122TV", image:"assets/products/calculator/HL122TV.png", info:"" }, 
+                        { brand:"Casio", model:"HL815", image:"assets/products/calculator/HL815.png", info:"" }, 
+                        { brand:"Casio", model:"HL820LV", image:"assets/products/calculator/HL820LV.png", info:"" }, 
+                        { brand:"Casio", model:"HR8TM", image:"assets/products/calculator/HR8TM.png", info:"" }, 
+                        { brand:"Casio", model:"JJ-120D-PLUS", image:"assets/products/calculator/JJ-120D-PLUS.png", info:"" }, 
+                        { brand:"Casio", model:"KL820", image:"assets/products/calculator/KL820.png", info:"" }, 
+                        { brand:"Casio", model:"MJ-120D", image:"assets/products/calculator/MJ-120D.png", info:"" }, 
+                        { brand:"Casio", model:"MJ-120D-PLUS", image:"assets/products/calculator/MJ-120D-PLUS.png", info:"" }, 
+                        { brand:"Casio", model:"MJ12D", image:"assets/products/calculator/MJ12D.png", info:"" }, 
+                        { brand:"Casio", model:"MJ12SA", image:"assets/products/calculator/MJ12SA.png", info:"" }, 
+                        { brand:"Casio", model:"NJ120D", image:"assets/products/calculator/NJ120D.png", info:"" }, 
+                     ]
         }
     ]
-        
+    // { brand:"", model:"", image:"assets/products/refrigerator/.png", info:"" },   
 };
 
 export const Service = [
-                        {brand:"", name:"", address:"", phone:"", email:""},
-                        {brand:"", name:"", address:"", phone:"", email:""},
-                        {brand:"", name:"", address:"", phone:"", email:""},
-                        {brand:"", name:"", address:"", phone:"", email:""},
-                        {brand:"", name:"", address:"", phone:"", email:""},
-                        {brand:"", name:"", address:"", phone:"", email:""}
+                        {
+                            brand: "Philips",
+                            center: [
+                                        { 
+                                            name:"Titan Electronics", 
+                                            address:"Gobindapur More, South 24 Parganas, N S C Bose Road",
+                                            pin:"Kolkata - 700145", 
+                                            phone:"03324377022, 9830278226"
+                                        },
+                                        { 
+                                            name:"New Service Plus", 
+                                            address:"460, Brahmo Samaj Road, Near Panna Oil Mill", 
+                                            pin:"Kolkata - 700034",
+                                            phone:"3323491324"
+                                        },
+                                        { 
+                                            name:"Vinayak Life Style Care", 
+                                            address:"20/9A, NSC Bose Road, Graham Land, Tollygunge", 
+                                            pin:"Kolkata - 700040",
+                                            phone:"8599960851"
+                                        },
+                                        { 
+                                            name:"Deb Electronics", 
+                                            address:"19 Baghajatin Station Road, SPP Block, Baghajatin Corporation Market",
+                                            pin:"Kolkata - 700086", 
+                                            phone:"3365555640"
+                                        },
+                                        { 
+                                            name:"Central Service", 
+                                            address:"118/1 Raja S.C Mallick Road", 
+                                            pin:"Kolkata - 700047",
+                                            phone:"9433891497"
+                                        },
+                                        { 
+                                            name:"Care Electronics", 
+                                            address:"48 Southern Avenue",
+                                            pin:"Kolkata - 700029", 
+                                            phone:"24661568"
+                                        },
+                                        { 
+                                            name:"Sresh Touch", 
+                                            address:"3E Naskar Para Lane Sahid Nagar",
+                                            pin:"Kolkata - 700031", 
+                                            phone:"8272967859"
+                                        },
+                                        { 
+                                            name:"Electro Care", 
+                                            address:"30C Ramkrishna Samadhi Road, Near Subhas Mela Park", 
+                                            pin:"Kolkata - 700054",
+                                            phone:"3364991306"
+                                        },
+                                        { 
+                                            name:"City Service", 
+                                            address:"221 Aurobinda Sarani, Gouri Bari, Khanna Cinema", 
+                                            pin:"Kolkata - 700004",
+                                            phone:"3325300171"
+                                        },
+                                        { 
+                                            name:"New Ankit Infotech", 
+                                            address:"6K B.T.Road, N.L Adarsha Madhyamik Vidyalay",
+                                            pin:"Kolkata - 700002", 
+                                            phone:"3325548793"
+                                        },
+                                        { 
+                                            name:"Utilities", 
+                                            address:"Flat No:B-2, Manoda Apartment, Doltala", 
+                                            pin:"Kolkata - 700132",
+                                            phone:"7059224780, 9830000000"
+                                        },
+                                        { 
+                                            name:"Prompt", 
+                                            address:"8, Narendra Nagar, Near L9 Bus Stand, Belgharia", 
+                                            pin:"Kolkata - 700056",
+                                            phone:"033-30605953/5954, 9330159479"
+                                        },
+                                        { 
+                                            name:"Prerona Enterprise", 
+                                            address:"No.5, G.B. Dutta Road, Sodepur, Kanchkal More, Opp. Balaji Apartment", 
+                                            pin:"Kolkata - 700110",
+                                            phone:"033-65555457, 9038011416"
+                                        }
+
+                                    ]
+                        },
+                        {
+                            brand: "Lenovo",
+                            center: [
+                                        { 
+                                            name:"Anand International", 
+                                            address:"233, Diamond Harbour Road, Behala",
+                                            pin:"Kolkata - 700034", 
+                                            phone:"9830198501"
+                                        },
+                                        { 
+                                            name:"Lenovo Authorized Service center", 
+                                            address:"Victoria Plaza, Upper Ground Floor, 385 Main Road, Garia",
+                                            pin:"Kolkata - 700084", 
+                                            phone:"8478827555"
+                                        },
+                                        { 
+                                            name:"Syscomp Infosol", 
+                                            address:"BD 79, Salt Lake City Sector 1, Near City Centre 1 & Water Tank No-3", 
+                                            pin:"Kolkata - 700064",
+                                            phone:"3365250022"
+                                        },
+                                        { 
+                                            name:"Qdigi Services", 
+                                            address:"7, Khairu Place, Kolkata", 
+                                            pin:"Kolkata - 700072",
+                                            phone:"3340052813"
+                                        }
+                                    ]
+                        },
+                        {
+                            brand: "Oppo",
+                            center: [
+                                        { 
+                                            name:"Pace Tel Systems Private Limited", 
+                                            address:"64A, Hemanta Basu Sarani, Dalhousie (B.B.D Bag), 2A R.N.Mukherjee Road, Ward No.46, 1st Floor, Holding No.9, Room No. 105", 
+                                            pin:"Kolkata - 700094",
+                                            phone:"3346019961"
+                                        },
+                                        { 
+                                            name:"Pace Tel Systems Private Limited", 
+                                            address:"167, Shop 2, Block 1, Club Town Green Apartment, Jessore Road, Bangur Avenue, Near China Mandir Bus", 
+                                            pin:"Kolkata - 700055",
+                                            phone:"9674000263, 8981190780"
+                                        },
+                                        { 
+                                            name:"Pace Tel Systems Private Limited", 
+                                            address:"2 no. Garia Station Road, Shantiniketan Building, Near Shitala Mandir", 
+                                            pin:"Kolkata - 700017",
+                                            phone:"9836804600"
+                                        }
+                                    ]
+                        },
+                        {
+                            brand: "HP",
+                            center: [
+                                        { 
+                                            name:"Iqor Global Services India Pvt Ltd", 
+                                            address:"P39, Ground Floor, Princep Street", 
+                                            pin:"Kolkata - 700072",                                            
+                                            phone:"8585090010"
+                                        },
+                                        { 
+                                            name:"Sysnet Global Technologies Pvt. Ltd.", 
+                                            address:"52, Tollygunj Circular Road, 1st floor",
+                                            pin:"Kolkata - 700053", 
+                                            phone:"03365006597, 983630377"
+                                        },
+                                        { 
+                                            name:"Bard Roy Infotech Pvt. Ltd.", 
+                                            address:"6 Hospital Street, Opp-Jyoti Cinema",
+                                            pin:"Kolkata - 700072", 
+                                            phone:"3340103179"
+                                        }
+                                    ]
+                        }
                        ]
 
 export const Contact = 

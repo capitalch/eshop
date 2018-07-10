@@ -1,3 +1,20 @@
-<div style="display: flow-root;">
- This page is under construction
+<div class="service-center-container" *ngFor="let service of serviceCenter">
+    <div class="brand-header">{{service.brand}}</div>
+    <div class="service-center" *ngFor="let center of service.center">
+        <div class="center-name">{{center.name}}</div>
+        <table class="center-details">
+            <tr class="name-value">
+                <td class="name"><strong>Address</strong></td>
+                <td class="value">{{center.address}}</td>
+            </tr>
+            <tr class="name-value">
+                <td class="name"><strong>PIN</strong></td>
+                <td class="value">{{center.pin}}</td>
+            </tr>
+            <tr class="name-value">
+                <td class="name"><strong>Phone</strong></td>
+                <td class="value">{{center.phone}}</td>
+            </tr>
+        </table>
+    </div>
 </div>
