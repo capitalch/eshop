@@ -426,6 +426,17 @@ export const Service = [
                                             phone:"3340103179"
                                         }
                                     ]
+                        },
+                        {
+                            brand: "Sony",
+                            center: [
+                                        { 
+                                            name:"Nav Technology Pvt Ltd", 
+                                            address:"130A Baghmari Road, Kakurgachi, Near Baghmari Kabarsthan", 
+                                            pin:"Kolkata - 700054",                                            
+                                            phone:"9831785098"
+                                        }
+                                    ]
                         }
                        ]
 
