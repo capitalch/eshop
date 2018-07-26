@@ -21,11 +21,6 @@ export class HeaderComponent implements OnInit {
 
     this.headerData = HeaderInfo;
     this.menus = Menus;
-
-  }
-
-  navigate(menu)
-  {
     this.subs = this.ibuki.filterOn('selectedMenu').subscribe(d => {
       if (d.error) {
         console.log(d.error);
@@ -33,7 +28,10 @@ export class HeaderComponent implements OnInit {
         this.selectedMenu = d.data
       }
     });
+  }
 
+  navigate(menu)
+  {
     this.selectedMenu = menu;
     this.router.navigate([menu]);
   }

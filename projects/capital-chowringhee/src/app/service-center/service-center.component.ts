@@ -17,7 +17,6 @@ export class ServiceCenterComponent implements OnInit {
 
     //Fetching Service Center
     this.serviceCenter = Service;
-    console.log(this.serviceCenter);
   }
 
 }

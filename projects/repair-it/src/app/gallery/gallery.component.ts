@@ -42,4 +42,9 @@ export class GalleryComponent implements OnInit {
     this.enlarge = false;
   }
 
+  ngOnDestroy()
+  {
+    this.subs.unsubscribe();
+  }
+
 }

@@ -9,7 +9,6 @@ import {IbukiService} from 'ibuki';
 })
 export class HomeComponent implements OnInit {
 
-  subs : any;
   content : any;
   carousel : any;
   constructor(private ibuki: IbukiService) { }

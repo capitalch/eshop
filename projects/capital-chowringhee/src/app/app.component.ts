@@ -8,7 +8,7 @@ import {Urls} from './app.config';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Repair-it';
+  title = 'Capital Chowringhee';
 
   constructor(private router: Router)
   {
