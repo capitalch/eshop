@@ -27,7 +27,6 @@ export class ProductsComponent implements OnInit {
 
     //Fetching products based on category selected
     this.products = Products.category.find(x=>x.name ==this.category).product;
-    console.log(this.products);
   }
 
   ngOnDestroy()
