@@ -34,6 +34,12 @@
       ],
       "angular-material/*": [
         "dist/angular-material/*"
+      ],
+      "ibuki1": [
+        "dist/ibuki1"
+      ],
+      "ibuki1/*": [
+        "dist/ibuki1/*"
       ]
     }
   }
