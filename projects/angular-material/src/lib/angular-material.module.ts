@@ -28,7 +28,7 @@ import { MatMomentDateModule } from '@angular/material-moment-adapter';
   ],
   declarations: [],
   exports: [
-  MatButtonModule
+    MatButtonModule
     , MatIconModule
     , MatPaginatorModule
     , MatCardModule
