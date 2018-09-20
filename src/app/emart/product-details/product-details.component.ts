@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { navUrls, httpMessages, localMessages } from '../emart.config';
-import { RatingModule } from 'ng2-rating';
+// import { RatingModule } from 'ng2-rating';
 import { IbukiService } from 'ibuki';
 import { AppService } from '../../service/app.service';
 

@@ -12,7 +12,7 @@ import { AngularMaterialModule } from 'angular-material';
 import { CategoryComponent } from './category/category.component';
 import { FooterComponent } from './footer/footer.component';
 import { TreeModule } from 'primeng/primeng';
-import { RatingModule } from 'ng2-rating';
+// import { RatingModule } from 'ng2-rating';
 import { CartComponent } from './cart/cart.component';
 // import { EmartService } from './emart.service';
 import { CartUnitComponent } from './sub-components/cart-unit/cart-unit.component';
@@ -30,7 +30,7 @@ import { EmartResolver } from './emart-resolver';
     ReactiveFormsModule,
     AngularMaterialModule,
     TreeModule,
-    RatingModule,
+    // RatingModule,
     NgxStripeModule.forRoot('pk_test_uEMw3BrgY65tm3LXQNVfWfUq')
   ],
   declarations: [CompositeComponent,

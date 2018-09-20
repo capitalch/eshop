@@ -1,7 +1,7 @@
 <div class="name-highlight-rating-container">
   <div class="product-name">{{product.name}}</div> 
   <div class="product-highlight">{{product.label && product.label.toString()}}</div>
-  <rating class="star-rating" [(ngModel)]="product.scores" readonly="true"></rating>
+  <!-- <rating class="star-rating" [(ngModel)]="product.scores" readonly="true"></rating> -->
 </div>
 <div class="image-dealer-specs-container">
   <div class="image-dealer-container">
@@ -42,7 +42,7 @@
     <div class="review" *ngFor="let review of reviewResponse">
       <div class="review-title-container">
         <span class="review-title"><span class="highlight">{{review && review.title}}</span></span> 
-        <rating class="review-rating" [(ngModel)]="review.rating" readonly="true"></rating>
+        <!-- <rating class="review-rating" [(ngModel)]="review.rating" readonly="true"></rating> -->
         <i class="likes fa fa-heart fa-lg" aria-hidden="true">{{review && review.likes}}</i>
       </div>
       <div class="review-images">
