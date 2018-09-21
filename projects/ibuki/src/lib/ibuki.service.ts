@@ -48,7 +48,7 @@ export class IbukiService {
   httpPost(id: string, body?: any, queryParams?: {}, carryBag?: any) {
     const url = this.getHttpUrl(id);
     body = body || {};
-    const a = body.id || (body.id = id);
+    body.id || (body.id = id);
     if (queryParams) {
       let httpParams = new HttpParams();
       httpParams = Object
@@ -74,13 +74,13 @@ export class IbukiService {
   }
 
   init(_settings) {
-    this.settings = _settings;
+    Object.assign(this.settings, _settings);
   }
   getHttpUrl = (id) => {
     const host = this.settings.host.replace(/\/$/, '');
     let url = this.settings[id];
-    const a = url || (url = this.settings['defaultEndPoint']);
-    const b = url && (url = url.replace(/^,/, ''));
+    url || (url = this.settings['defaultEndPoint']);
+    url && (url = url.replace(/^,/, ''));
     url = host.concat('/', url);
     return (url);
   }
