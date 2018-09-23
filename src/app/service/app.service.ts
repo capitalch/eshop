@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { IbukiService } from 'ibuki';
-import { Observable } from 'rxjs/Observable';
-import { interval } from 'rxjs/observable/interval';
-import { ActivatedRoute } from '@angular/router';
+// import { Observable } from 'rxjs/Observable';
+// import { interval } from 'rxjs/observable/interval';
+// import { ActivatedRoute } from '@angular/router';
+// import { of, Observable, interval } from 'rxjs';
+import { of, interval, Observable } from 'rxjs';
+import { delay } from 'rxjs/operators';
 
 @Injectable(
   {
@@ -16,10 +19,12 @@ export class AppService {
   isInitialized = false;
   constructor(private httpClient: HttpClient
     , private ibukiService: IbukiService
-    , private activatedRoute: ActivatedRoute
+    // , private activatedRoute: ActivatedRoute
   ) {
     // get settings file
-    Observable.of(null).delay(0).subscribe(x => {
+    // Observable.of(null).delay(0).subscribe(x => {
+    of(null).pipe(delay(0)).subscribe(x => {
+      // of(null).delay(0).subscribe(x => {
       httpClient
         .get('assets/settings.json')
         .subscribe(d => {
@@ -31,31 +36,7 @@ export class AppService {
           console.log(err);
         });
     });
-    // httpClient
-    //   .get('assets/settings.json')
-    //   .subscribe(d => {
-    //     this.ibukiService.init(d);
-    //     this.ibukiService.behEmit('get:settings', d);
-    //     this.notInitialized = false;
-    //   }, err => {
-    //     console.log(err);
-    //   });
   }
-
-  // getDefaultCategory() {
-  //   return (this.defaultCategory);
-  // }
-
-  // setDefaultCategory(cat) {
-  //   this.defaultCategory = cat;
-  // }
-  // getIsNotInitialized() {
-  //   return (this.isNotInitialized);
-  // }
-
-  // getIsInitialized() {
-  //   return (this.isInitialized);
-  // }
 
   // waits and polls till settings is downloaded and then does http request
   waitForSettingsThenPost(id, params) {

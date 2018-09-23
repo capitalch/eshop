@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Brands,Urls} from '../app.config';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Brands, Urls } from '../app.config';
+import { Router } from '@angular/router';
 import { IbukiService } from 'ibuki';
 
 @Component({
@@ -11,18 +11,16 @@ import { IbukiService } from 'ibuki';
 export class SelectionComponent implements OnInit {
 
   brands: any = {};
-  constructor(private router: Router, private activatedRoute: ActivatedRoute, private ibuki: IbukiService) { }  //
-
+  constructor(private router: Router, private ibuki: IbukiService) { }
   ngOnInit() {
     this.brands = Brands;
-    this.ibuki.emit("showMenu", false);
-    this.ibuki.emit("selectedMenu", "Home");
+    this.ibuki.emit('showMenu', false);
+    this.ibuki.emit('selectedMenu', 'Home');
   }
 
-  selectBrand(brand)
-  {
-    this.ibuki.emit("showMenu", true);
-    this.ibuki.behEmit("brand", brand);
-    this.router.navigate([Urls.home])
+  selectBrand(brand) {
+    this.ibuki.emit('showMenu', true);
+    this.ibuki.behEmit('brand', brand);
+    this.router.navigate([Urls.home]);
   }
 }

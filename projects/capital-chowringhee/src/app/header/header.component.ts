@@ -1,21 +1,20 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-import {HeaderInfo, Menus,Urls} from '../app.config';
-import {IbukiService} from 'ibuki';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Router } from '@angular/router';
+import { HeaderInfo, Menus, Urls } from '../app.config';
+import { IbukiService } from 'ibuki';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnDestroy {
 
   headerData: any;
-  subs : any;
-  menus : any;
-  selectedMenu: any = "home";
-  
-  constructor(private router: Router, private activatedRoute: ActivatedRoute ,private ibuki: IbukiService) { }  //
+  subs: any;
+  menus: any;
+  selectedMenu: any = 'home';
+  constructor(private router: Router, private ibuki: IbukiService) { }  //
 
   ngOnInit() {
 
@@ -25,13 +24,12 @@ export class HeaderComponent implements OnInit {
       if (d.error) {
         console.log(d.error);
       } else {
-        this.selectedMenu = d.data
+        this.selectedMenu = d.data;
       }
     });
   }
 
-  navigate(menu)
-  {
+  navigate(menu) {
     this.selectedMenu = menu;
     this.router.navigate([menu]);
   }

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { filter } from 'rxjs/operators';
 import { Subject, BehaviorSubject, Observable } from 'rxjs';
 
@@ -77,7 +77,8 @@ export class IbukiService {
     Object.assign(this.settings, _settings);
   }
   getHttpUrl = (id) => {
-    const host = this.settings.host.replace(/\/$/, '');
+    let host = this.settings.host.replace(/\/$/, '');
+    host = host || top.location.host.replace(/\/$/, '');
     let url = this.settings[id];
     url || (url = this.settings['defaultEndPoint']);
     url && (url = url.replace(/^,/, ''));

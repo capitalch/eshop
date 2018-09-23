@@ -1,4 +1,4 @@
 const settings = {
-    'authenticate': '/authenticate'
+    'authenticate:login>ibuki': '/authenticate'
 };
-export { settings };
+export {settings};

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Products } from '../app.config';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 import { IbukiService } from 'ibuki';
 
 @Component({
@@ -10,21 +10,20 @@ import { IbukiService } from 'ibuki';
 })
 export class CategoriesComponent implements OnInit {
 
-  categories : any;
+  categories: any;
   constructor(private router: Router, private ibuki: IbukiService) { }
 
   ngOnInit() {
 
-    this.ibuki.emit("selectedMenu", "products");
-    
-    //Fetch the categories
+    this.ibuki.emit('selectedMenu', 'products');
+
+    // Fetch the categories
     this.categories = Products.category;
 
   }
 
-  selectCategory(category)
-  {
-    this.ibuki.behEmit("category", category);
-    this.router.navigate(["productsList"])
+  selectCategory(category) {
+    this.ibuki.behEmit('category', category);
+    this.router.navigate(['productsList']);
   }
 }

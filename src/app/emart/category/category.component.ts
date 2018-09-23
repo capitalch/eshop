@@ -1,9 +1,8 @@
 import { Component, OnInit, OnDestroy, AfterViewInit } from '@angular/core';
 import { IbukiService } from 'ibuki';
-import { TreeNode } from 'primeng/primeng';
 import { AppService } from '../../service/app.service';
 import { Router, ActivatedRoute } from '@angular/router';
-import { navUrls, httpMessages, localMessages } from '../emart.config';
+import { navUrls, httpMessages } from '../emart.config';
 
 @Component({
   selector: 'app-category',
@@ -60,7 +59,7 @@ export class CategoryComponent implements OnInit, OnDestroy {
         this.searchString = d.carryBag,
         this.processLazy(),
         this.router.navigate([navUrls.product]
-          , {queryParams: { catId: 0, count: d.data[0].product_cnt, searchString: this.searchString }}
+          , { queryParams: { catId: 0, count: d.data[0].product_cnt, searchString: this.searchString } }
         )
       );
     });

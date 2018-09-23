@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { AngularMaterialModule } from 'angular-material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+
+import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { IbukiModule } from 'ibuki';
 @NgModule({
