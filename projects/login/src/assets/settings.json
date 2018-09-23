@@ -1,0 +1,6 @@
+{
+    "urls": {
+        "host": "http://localhost:3000",
+        "authenticate:login>ibuki": "/authenticate"
+    }
+}

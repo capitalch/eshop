@@ -1,4 +1,6 @@
-const settings = {
+const urls = {
     'authenticate:login>ibuki': '/authenticate'
 };
-export {settings};
+export {urls};
+// const protocol = 'http://';
+// export {protocol};
