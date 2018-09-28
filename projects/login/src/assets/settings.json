@@ -1,6 +1,7 @@
 {
     "urls": {
         "host": "http://localhost:3000",
-        "authenticate:login>ibuki": "/authenticate"
+        "authenticate:login>ibuki": "/authenticate",
+        "register:login>ibuki": "/register"
     }
 }

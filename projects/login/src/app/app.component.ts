@@ -49,15 +49,23 @@ export class AppComponent implements OnInit {
     console.log(decrypted.toString(crypto.enc.Utf8));
   }
 
+  register() {
+    const auth = crypto.AES.encrypt(this.username.concat(':', this.password), 'Secret Passphrase');
+    this.ibuki.httpPost('register:login>ibuki'
+      , {
+        auth: auth.toString()
+      });
+  }
+
   login() {
     this.endecr();
     this.ibuki.filterOn('authenticate:login>ibuki').subscribe(d => {
       console.log(d.data);
     });
-    const auth = crypto.AES.encrypt(this.username.concat(':', this.password), 'Secret Passphrase';
+    const auth = crypto.AES.encrypt(this.username.concat(':', this.password), 'Secret Passphrase');
     this.ibuki.httpPost('authenticate:login>ibuki'
       , {
-        auth: auth.toString();
+        auth: auth.toString()
       });
 
 
