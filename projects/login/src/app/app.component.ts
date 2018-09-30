@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { IbukiService } from './ibuki.service';
 import { urls } from './app.settings';
 import * as crypto from 'crypto-js';
@@ -10,10 +10,11 @@ import { concat } from 'rxjs/operators';
   styleUrls: ['./app.component.scss']
 })
 
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnDestroy {
   title = 'login';
   username = '';
   password = '';
+  sub1: any;
 
   constructor(private appService: AppService,
     private ibuki: IbukiService
@@ -51,6 +52,9 @@ export class AppComponent implements OnInit {
 
   register() {
     const auth = crypto.AES.encrypt(this.username.concat(':', this.password), 'Secret Passphrase');
+    this.sub1 = this.ibuki.filterOn('register:login>ibuki').subscribe(d => {
+      console.log(d.data);
+    });
     this.ibuki.httpPost('register:login>ibuki'
       , {
         auth: auth.toString()
@@ -72,6 +76,10 @@ export class AppComponent implements OnInit {
     // bcrypt.hash(myPlaintextPassword, saltRounds, function (err, hash) {
     //   const x = 0;
     // });
+  }
+
+  ngOnDestroy() {
+    this.sub1.unsubscribe();
   }
 
 }
