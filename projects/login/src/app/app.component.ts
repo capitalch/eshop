@@ -14,7 +14,7 @@ export class AppComponent implements OnInit, OnDestroy {
   title = 'login';
   username = '';
   password = '';
-  sub1: any;
+  subs: any;
 
   constructor(private appService: AppService,
     private ibuki: IbukiService
@@ -23,6 +23,13 @@ export class AppComponent implements OnInit, OnDestroy {
   // base64(username:Hash of passowrd)
   ngOnInit() {
     this.ibuki.init(urls);
+    this.subs = this.ibuki.filterOn('register:login>ibuki').subscribe(d => {
+      console.log(d.data);
+    });
+    const sub1 = this.ibuki.filterOn('authenticate:login>ibuki').subscribe(d => {
+      console.log(d.data);
+    });
+    this.subs.add(sub1);
   }
   encrypt() {
     const base64Key = crypto.enc.Hex.parse('0123456789abcdef0123456789abcdef');
@@ -45,16 +52,14 @@ export class AppComponent implements OnInit, OnDestroy {
 
   endecr() {
     const encrypted = crypto.AES.encrypt('Message', 'Secret Passphrase');
-    const text = encrypted.toString(); console.log(text);
+    const text = encrypted.toString();
+    // console.log(text);
     const decrypted = crypto.AES.decrypt(text, 'Secret Passphrase');
-    console.log(decrypted.toString(crypto.enc.Utf8));
+    // console.log(decrypted.toString(crypto.enc.Utf8));
   }
 
   register() {
     const auth = crypto.AES.encrypt(this.username.concat(':', this.password), 'Secret Passphrase');
-    this.sub1 = this.ibuki.filterOn('register:login>ibuki').subscribe(d => {
-      console.log(d.data);
-    });
     this.ibuki.httpPost('register:login>ibuki'
       , {
         auth: auth.toString()
@@ -63,9 +68,6 @@ export class AppComponent implements OnInit, OnDestroy {
 
   login() {
     this.endecr();
-    this.ibuki.filterOn('authenticate:login>ibuki').subscribe(d => {
-      console.log(d.data);
-    });
     const auth = crypto.AES.encrypt(this.username.concat(':', this.password), 'Secret Passphrase');
     this.ibuki.httpPost('authenticate:login>ibuki'
       , {
@@ -79,7 +81,7 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    this.sub1.unsubscribe();
+    this.subs.unsubscribe();
   }
 
 }
