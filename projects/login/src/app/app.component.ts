@@ -24,11 +24,14 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.ibuki.init(urls);
     this.subs = this.ibuki.filterOn('register:login>ibuki').subscribe(d => {
-      console.log(d.data);
+      d.error
+        ? (console.log(d.error))
+        : (console.log(d.data));
     });
     const sub1 = this.ibuki.filterOn('authenticate:login>ibuki').subscribe(d => {
       console.log(d.data);
     });
+
     this.subs.add(sub1);
   }
   encrypt() {
@@ -42,9 +45,6 @@ export class AppComponent implements OnInit, OnDestroy {
     );
     return (encrypted.ciphertext.toString(crypto.enc.Base64));
   }
-  // var aesUtil = new AesUtil(keySize, iterationCount);
-  // var plaintext =  aesUtil.decrypt(salt, iv, encryptionKey, dataToDecrypt);
-  // console.log(plaintext);
 
   decrypt() {
     // const aesutil = new AesUtil(128, 10);
