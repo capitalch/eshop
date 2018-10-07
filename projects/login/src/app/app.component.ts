@@ -29,7 +29,18 @@ export class AppComponent implements OnInit, OnDestroy {
         : (console.log(d.data));
     });
     const sub1 = this.ibuki.filterOn('authenticate:login>ibuki').subscribe(d => {
-      console.log(d.data);
+      if (d.error) {
+        console.log(d.error);
+      } else {
+        console.log(d.data);
+      }
+    });
+    const sub2 = this.ibuki.filterOn('verify-token:login>ibuki').subscribe(d => {
+      if (d.error) {
+        console.log(d.error);
+      } else {
+        console.log(d.data);
+      }
     });
 
     this.subs.add(sub1);
@@ -78,6 +89,12 @@ export class AppComponent implements OnInit, OnDestroy {
     // bcrypt.hash(myPlaintextPassword, saltRounds, function (err, hash) {
     //   const x = 0;
     // });
+  }
+
+  verifyToken() {
+    this.ibuki.httpPost('verify-token:login>ibuki', {
+      token: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic3VzaCIsImppbmZvIjpudWxsLCJpYXQiOjE1Mzg5MjA5MTAsImV4cCI6MTUzODkyNDUxMH0.mpFmq2ToW0XWnxrM34DSMTY63fwlnHuGcKEfCMTmpw0`
+    });
   }
 
   ngOnDestroy() {
