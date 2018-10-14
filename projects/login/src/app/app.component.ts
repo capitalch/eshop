@@ -23,27 +23,27 @@ export class AppComponent implements OnInit, OnDestroy {
   // base64(username:Hash of passowrd)
   ngOnInit() {
     this.ibuki.init(urls);
-    this.subs = this.ibuki.filterOn('register:login>ibuki').subscribe(d => {
-      d.error
-        ? (console.log(d.error))
-        : (console.log(d.data));
-    });
-    const sub1 = this.ibuki.filterOn('authenticate:login>ibuki').subscribe(d => {
-      if (d.error) {
-        console.log(d.error);
-      } else {
-        console.log(d.data);
-      }
-    });
-    const sub2 = this.ibuki.filterOn('verify-token:login>ibuki').subscribe(d => {
-      if (d.error) {
-        console.log(d.error);
-      } else {
-        console.log(d.data);
-      }
-    });
+    // this.subs = this.ibuki.filterOn('register:login>ibuki').subscribe(d => {
+    //   d.error
+    //     ? (console.log(d.error))
+    //     : (console.log(d.data));
+    // });
+    // const sub1 = this.ibuki.filterOn('authenticate:login>ibuki').subscribe(d => {
+    //   if (d.error) {
+    //     console.log(d.error);
+    //   } else {
+    //     console.log(d.data);
+    //   }
+    // });
+    // const sub2 = this.ibuki.filterOn('verify-token:login>ibuki').subscribe(d => {
+    //   if (d.error) {
+    //     console.log(d.error);
+    //   } else {
+    //     console.log(d.data);
+    //   }
+    // });
 
-    this.subs.add(sub1);
+    // this.subs.add(sub1);
   }
   encrypt() {
     const base64Key = crypto.enc.Hex.parse('0123456789abcdef0123456789abcdef');
@@ -69,19 +69,25 @@ export class AppComponent implements OnInit, OnDestroy {
     // console.log(decrypted.toString(crypto.enc.Utf8));
   }
 
-  register() {
-    const auth = crypto.AES.encrypt(this.username.concat(':', this.password), 'Secret Passphrase');
-    this.ibuki.httpPost('register:login>ibuki'
-      , {
-        auth: auth.toString()
-      });
+  async register() {
+    try {
+      const auth = crypto.AES.encrypt(this.username.concat(':', this.password), 'Secret Passphrase');
+      const d = this.ibuki.httpPost$('register:login'
+        , {
+          auth: auth.toString()
+        });
+      d.err && this.ibuki.throw(d.err);
+      await d.data.toPromise();
+    } catch (err) {
+      console.log(err.Message || err.message);
+    }
   }
 
   async login() {
     try {
       this.endecr();
       const auth = crypto.AES.encrypt(this.username.concat(':', this.password), 'Secret Passphrase');
-      const d = this.ibuki.httpPost$('authenticate:login>ibuki', {
+      const d = this.ibuki.httpPost$('authenticate:login', {
         auth: auth.toString()
       });
       d.err && this.ibuki.throw(d.err);
@@ -92,10 +98,17 @@ export class AppComponent implements OnInit, OnDestroy {
     }
   }
 
-  verifyToken() {
-    this.ibuki.httpPost('verify-token:login>ibuki', {
-      token: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic3VzaCIsImppbmZvIjpudWxsLCJpYXQiOjE1Mzg5MjA5MTAsImV4cCI6MTUzODkyNDUxMH0.mpFmq2ToW0XWnxrM34DSMTY63fwlnHuGcKEfCMTmpw0`
-    });
+  async verifyToken() {
+    try {
+      const d = this.ibuki.httpPost$('verify-token:login', {
+        token: `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoic3VzaCIsImppbmZvIjpudWxsLCJpYXQiOjE1Mzg5MjA5MTAsImV4cCI6MTUzODkyNDUxMH0.mpFmq2ToW0XWnxrM34DSMTY63fwlnHuGcKEfCMTmpw0`
+      });
+      d.err && this.ibuki.throw(d.err);
+      const data = await d.data.toPromise();
+      console.log(data);
+    } catch (err) {
+      console.log(err.Message || err.message);
+    }
   }
 
   ngOnDestroy() {

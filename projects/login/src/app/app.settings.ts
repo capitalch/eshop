@@ -1,6 +1,6 @@
 const urls = {
-    'authenticate:login>ibuki': '/authenticate'
-    , 'verify-token:login>ibuki': '/test'
+    // 'authenticate:login': '/authenticate'
+    // , 'verify-token:login>ibuki': '/test'
 };
 export { urls };
 // const protocol = 'http://';

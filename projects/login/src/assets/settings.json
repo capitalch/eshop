@@ -1,7 +1,9 @@
 {
     "urls": {
         "host": "http://localhost:3000",
-        "authenticate:login>ibuki": "/authenticate",
-        "register:login>ibuki": "/register"
+        "authenticate:login": "/authenticate",
+        "register:login": "/register",
+        "verify-token:login":"/test"
+
     }
 }
