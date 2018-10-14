@@ -77,18 +77,19 @@ export class AppComponent implements OnInit, OnDestroy {
       });
   }
 
-  login() {
-    this.endecr();
-    const auth = crypto.AES.encrypt(this.username.concat(':', this.password), 'Secret Passphrase');
-    this.ibuki.httpPost('authenticate:login>ibuki'
-      , {
+  async login() {
+    try {
+      this.endecr();
+      const auth = crypto.AES.encrypt(this.username.concat(':', this.password), 'Secret Passphrase');
+      const d = this.ibuki.httpPost$('authenticate:login>ibuki', {
         auth: auth.toString()
       });
-
-
-    // bcrypt.hash(myPlaintextPassword, saltRounds, function (err, hash) {
-    //   const x = 0;
-    // });
+      d.err && this.ibuki.throw(d.err);
+      const data = await d.data.toPromise();
+      console.log(data);
+    } catch (err) {
+      console.log(err.Message || err.message);
+    }
   }
 
   verifyToken() {

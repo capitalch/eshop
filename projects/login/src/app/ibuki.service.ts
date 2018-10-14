@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { filter } from 'rxjs/operators';
 import { Subject, BehaviorSubject, Observable } from 'rxjs';
+import { query } from '@angular/core/src/render3/query';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +20,15 @@ export class IbukiService {
   constructor(private httpClient: HttpClient) {
     this.subject = new Subject();
     this.behSubject = new BehaviorSubject(0);
+  }
+
+  throw(e) {
+    const type = typeof e;
+    if (type === 'object') {
+      throw e;
+    } else {
+      throw new Error(e);
+    }
   }
 
   emit(id: string, options?: any) {
@@ -39,11 +49,11 @@ export class IbukiService {
     return (this.behSubject.pipe(filter(d => (d.id === id))));
   }
 
-  httpPost$(url: string) {
-    const obs = this.httpClient
-      .post(url, null);
-    return (obs);
-  }
+  // httpPost$(url: string) {
+  //   const obs = this.httpClient
+  //     .post(url, null);
+  //   return (obs);
+  // }
 
   httpPost(id: string, body?: any, queryParams?: {}, carryBag?: any) {
     const url = this.getHttpUrl(id);
@@ -74,6 +84,30 @@ export class IbukiService {
           .subject
           .next({ id: id, error: err });
       });
+  }
+
+  httpPost$(id: string, body?: any, queryParams?: {}, carryBag?: any) {
+    const d: any = {};
+    try {
+      const url = this.getHttpUrl(id);
+      body = body || {};
+      body.id || (body.id = id);
+      if (queryParams) {
+        let httpParams = new HttpParams();
+        httpParams = Object
+          .keys(queryParams)
+          .reduce((prev, x, i) => {
+            httpParams = httpParams.append(x, queryParams[x]);
+            return (httpParams);
+          }, httpParams);
+        queryParams = httpParams;
+      }
+      d.data = this.httpClient.post(url, body, { params: queryParams });
+    } catch (err) {
+      d.err = err;
+    } finally {
+      return (d);
+    }
   }
 
   init(_settings) {

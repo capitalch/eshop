@@ -14,7 +14,9 @@ export class AppService {
       });
     ibuki.httpGet('acquire:settings:login');
   }
+
   getAbsoluteUrl(relativeUrl) {
     return (top.location.host.concat(relativeUrl));
   }
+
 }
