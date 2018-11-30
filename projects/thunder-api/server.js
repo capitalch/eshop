@@ -7,10 +7,6 @@ var def = require('./artifacts/definitions');
 var messages = require('./artifacts/messages');
 var express = require('express');
 var app = express();
-// var ibuki = require('ibuki');
-
-// var myIbuki = new ibuki.IbukiService('');
-// myIbuki.emit('ttt');
 
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({limit: '50mb', extended: true}));
@@ -32,10 +28,20 @@ var allowCrossDomain = function (req, res, next) {
 };
 app.use(allowCrossDomain);
 
-var router = require('./artifacts/router');
-app.use(router);
+// var router = require('./artifacts/router');
+// app.use(router);
 var postgres = require('./artifacts/postgres');
 app.use(postgres);
+
+postgres.get('/apps/eshop', (req, res, next) => {
+    try {
+        res.sendFile(path.join(__dirname,'public','index.html'));
+    } catch (error) {
+        let err = new def.NError(500, messages.errInternalServerError, error.message);
+        next(err);
+    }
+});
+
 process.env.NODE_ENV = config.env;
 //for cross domain
 

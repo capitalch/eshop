@@ -1,8 +1,18 @@
 {
-    "port": 3002,
+    "port": 3000,
     "env": "development",
-    "user": "postgres",
-    "database": "ecomm",
-    "password": "su$hant123",
-    "dbPort": 5432
+    "db": {
+        "user": "postgres",
+        "database": "ecomm",
+        "password": "qXxzcLWbFQ",
+        "port": 5432,
+        "host":"103.217.220.164"
+    },
+    "db1": {
+        "user": "postgres",
+        "database": "qx-demo",
+        "password": "qXxzcLWbFQ",
+        "port": "5432",
+        "host": "103.217.220.164"
+    }
 }
