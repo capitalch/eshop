@@ -11,7 +11,7 @@
         margin: 5px;
     }
     div {
-        margin: 5px 8px 0 8px;
+        margin: 0px 8px 0 8px;
     }
     i,
     small {
@@ -94,4 +94,8 @@
         display: inline-block;
         margin-left: 5px;
     }
+}
+
+::ng-deep .mat-checkbox-layout .mat-checkbox-inner-container {
+    width: 36px;
 }
