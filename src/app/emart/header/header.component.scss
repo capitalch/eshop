@@ -18,12 +18,14 @@
             color: $theme-logo-color;
         }
         .search-input-container {
-            width:440px;
-            font-size:1.3em;
-            height:3.2em;
-            .search-input
-            {
-                width:90%;
+            width: 440px;
+            font-size: 1.3em;
+            height: 3.6em;
+            .search-input {
+                width: 90%;
+                height: 100%;
+                background-color: white;
+                color: black;
             }
         }
         .header-button {
@@ -51,12 +53,11 @@
         }
         .login-controls {
             width: 26em;
-            float:left;
+            float: left;
             .header-button {
                 background-color: $emart-header-background;
                 min-width: 0vw;
                 border: 1px solid $emart-header-background;
-                
             }
             .header-button:hover {
                 border: 1px solid $emart-header-font-color;
@@ -65,18 +66,16 @@
     }
 }
 
-::ng-deep .mat-form-field-underline
-{
+::ng-deep .mat-form-field-underline {
     background: white;
-}
-::ng-deep .mat-form-field-ripple
-{
-    background: white;
-}
-.search-clear
-{
-    line-height: 0 !important;
-    min-width: 0 !important;
-    float:right
 }
 
+::ng-deep .mat-form-field-ripple {
+    background: white;
+}
+
+.search-clear {
+    line-height: 0 !important;
+    min-width: 0 !important;
+    float: right
+}

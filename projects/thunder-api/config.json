@@ -2,11 +2,11 @@
     "port": 3000,
     "env": "development",
     "db": {
-        "user": "postgres",
+        "user": "webadmin",
         "database": "ecomm",
-        "password": "qXxzcLWbFQ",
+        "password": "AMGnbm23767",
         "port": 5432,
-        "host":"103.217.220.164"
+        "host":"103.217.220.119"
     },
     "db1": {
         "user": "postgres",
