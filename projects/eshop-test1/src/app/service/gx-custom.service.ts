@@ -6,7 +6,7 @@ import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/switchMap';
 import 'rxjs/add/operator/first';
 import 'rxjs/add/operator/delay';
-import { countries, genders1, food1, names1 } from './options-set';
+import { countries, genders1, food1, names1, department, employmentType } from './options-set';
 import { IbukiService } from 'ibuki';
 import { GxService } from '../gx-dynamic-form/gx-service/gx.service';
 import { GxMapperService } from '../gx-dynamic-form/gx-service/gx-mapper.service';
@@ -45,7 +45,8 @@ export class GxCustomService {
     , names1: names1
     , names2: () => names1
     , names3: of(names1).delay(100)
-
+    , dept: () => department
+    , type: () => employmentType
   };
 
   registerOptions() {

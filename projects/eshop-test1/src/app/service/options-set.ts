@@ -48,3 +48,20 @@ const names1 = [
     , 'Niraj'
 ];
 export { names1 };
+
+const department = [
+    { name: 'Select', value: '' },
+    { name: 'IT', value: '' },
+    { name: 'Manager', value: '' },
+    { name: 'Tester', value: '' },
+    { name: 'Accountant', value: '' },
+    { name: 'HR', value: '' }
+];
+export {department};
+
+const employmentType = [
+    { name: 'Full-time', value: true, id: 'FullTime' }
+    , { name: 'Part-time', value: false, id: 'PartTime' }
+    , { name: 'Contractual', value: false, id: 'Contractual' }
+];
+export {employmentType}
