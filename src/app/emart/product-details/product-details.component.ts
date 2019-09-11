@@ -23,8 +23,9 @@ export class ProductDetailsComponent implements OnInit, OnDestroy {
     , private appService: AppService
   ) { }
 
+  // This is just a test comment
   ngOnInit() {
-    let index = 0, a, b;
+    let index = 0, a: any, b: any;
     this.subs = this.ibukiService.filterOn(httpMessages.productDetailsOnId).subscribe(d => {
       d.error ? console.log(d.error) : (
         this.product = d.data && d.data[0] && d.data[0].rows[0],
