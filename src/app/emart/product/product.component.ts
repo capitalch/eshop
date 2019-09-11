@@ -63,18 +63,6 @@ export class ProductComponent implements OnInit, OnDestroy {
     this.appService.waitForSettingsThenPost(httpMessages.products, { id: artifact, params: params });
   }
 
-  // let offSet = this.pageObject.pageIndex * this.pageObject.pageSize;
-  // let artifact: string, params: any[];
-  // (this.catId == 0) && (this.catId = "%")
-  // this.searchString
-  //   ? (artifact = httpMessages.searchProductsOnCriteria
-  //     , params = [this.searchString, this.catId,  offSet, this.pageObject.pageSize])
-  //   : (artifact = httpMessages.productsOnCategory
-  //     , params = [this.catId, offSet, this.pageObject.pageSize]);
-  // this.brokerService.httpPost(httpMessages.products, {
-  //   id: artifact, params: params
-  // })
-
   pageSelected(e) {
     this.pageObject.pageIndex = e.pageIndex;
     this.pageObject.pageSize = e.pageSize;
